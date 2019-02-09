@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Work;
 use App\Http\Resources\WorkResource;
+use App\Http\Requests\WorkRequest;
 
 class WorkController extends Controller
 {
@@ -12,7 +13,7 @@ class WorkController extends Controller
       return WorkResource::collection(Work::all());
   }
 
-  public function store(Request $request){
+  public function store(WorkRequest $request){
       $work = new Work;
       $work->newWork($request);
       return new WorkResource($work);
@@ -23,7 +24,7 @@ class WorkController extends Controller
       return new WorkResource($work);
   }
 
-  public function update(Request $request, $id){
+  public function update(WorkRequest $request, $id){
       $work = Work::findOrFail($id);
       $work->changeWork($request);
       return new WorkResource($work);

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Picture;
 use App\Http\Resources\PictureResource;
+use App\Http\Requests\PictureRequest;
 
 class PictureController extends Controller
 {
@@ -12,7 +13,7 @@ class PictureController extends Controller
       return PictureResource::collection(Picture::all());
   }
 
-  public function store(Request $request){
+  public function store(PictureRequest $request){
       $picture = new Picture;
       $picture->newPicture($request);
       return new PictureResource($picture);
@@ -23,7 +24,7 @@ class PictureController extends Controller
       return new PictureResource($picture);
   }
 
-  public function update(Request $request, $id){
+  public function update(PictureRequest $request, $id){
       $picture = Picture::findOrFail($id);
       $picture->changePicture($request);
       return new PictureResource($picture);

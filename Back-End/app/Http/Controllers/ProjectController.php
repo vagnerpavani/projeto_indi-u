@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Project;
 use App\Http\Resources\ProjectResource;
+use App\Http\Requests\ProjectRequest;
 
 class ProjectController extends Controller
 {
@@ -12,7 +13,7 @@ class ProjectController extends Controller
       return ProjectResource::collection(Project::all());
   }
 
-  public function store(Request $request){
+  public function store(ProjectRequest $request){
       $project = new Project;
       $project->newProject($request);
       return new ProjectResource($project);
@@ -23,7 +24,7 @@ class ProjectController extends Controller
       return new ProjectResource($project);
   }
 
-  public function update(Request $request, $id){
+  public function update(ProjectRequest $request, $id){
       $project = Project::findOrFail($id);
       $project->changeProject($request);
       return new ProjectResource($project);
