@@ -28,15 +28,15 @@ class UserRequest extends FormRequest
         if ($this->isMethod('post')){
             return [
                 'name' => 'required|string',
-                'username' => 'required|string|unique:users', 
+                'username' => 'required|string|unique:users',
                 'email' => 'required|email|unique:users',
                 'password' => 'required|min:8',
                 'repository' => 'url|nullable',
                 'projects_done' => 'integer|nullable',
-                'birthday' => 'string|nullable',
+                'birthday' => 'string|nullable|max:10|min:10',
                 'language' => 'string',
                 'country' => 'string|nullable',
-                'phonenumber' => 'integer|nullable',
+                'phone_number' => 'integer|nullable',
                 'description' => 'string|nullable',
                 'picture' => 'string|nullable',
             ];
@@ -44,7 +44,7 @@ class UserRequest extends FormRequest
         if ($this->isMethod('put')){
             return [
                 'name' => 'string',
-                'username' => 'string|unique:users', 
+                'username' => 'string|unique:users',
                 'email' => 'email|unique:users',
                 'password' => 'min:8',
                 'repository' => 'url|nullable',
@@ -52,7 +52,7 @@ class UserRequest extends FormRequest
                 'birthday' => 'string|nullable',
                 'language' => 'string',
                 'country' => 'string|nullable',
-                'phonenumber' => 'integer|nullable',
+                'phone_number' => 'integer|nullable',
                 'description' => 'string|nullable',
                 'picture' => 'string|nullable',
             ];
@@ -71,7 +71,7 @@ class UserRequest extends FormRequest
         'password.required'=> 'A senha é necessaria',
         'repository.url' => 'Insira um link url https:// www.exemplo.com',
         'projects_done.integer' => 'Por favor insira um número.',
-        'phonenumber.integer'=> 'Por favor insira apenas números',
+        'phone_number.integer'=> 'Por favor insira apenas números',
         ];
     }
 

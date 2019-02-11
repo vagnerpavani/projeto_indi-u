@@ -25,7 +25,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 
+        'password',
     ];
 
 
@@ -39,8 +39,8 @@ class User extends Authenticatable
         $this->birthday = $request->birth;
         $this->language = $request->language;
         $this->country = $request->country;
-        $this->phonenumber = $request->phonenumber;
-        $this->description = $request-> description;
+        $this->phone_number = $request->phone_number;
+        $this->description = $request->description;
         $this->picture = $request->picture;
 
         $this->save();
@@ -57,7 +57,7 @@ class User extends Authenticatable
         if($request->birthday) $this->birthday = $request->birthday;
         if($request->language) $this->language = $request->language;
         if($request->country) $this->country = $request->country;
-        if($request->phonenumber) $this->phonenumber = $request->phonenumber;
+        if($request->phone_number) $this->phone_number = $request->phone_number;
         if($request->description) $this->description = $request->description;
         if($request->picture) $this->picture = $request->picture;
 
@@ -65,4 +65,3 @@ class User extends Authenticatable
     }
 
 }
-

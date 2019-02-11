@@ -40,9 +40,9 @@ class WorkRequest extends FormRequest
             'project_id' => 'integer|exists:projects,id',
         ];
       }
+    }
 
-      public function messages()
-      {
+    public function messages(){
         return [
           'duty.string' => 'A função deve ser uma cadeia de caracteres.',
           'duty.required' => 'A função deve ser preenchida.',
@@ -51,12 +51,9 @@ class WorkRequest extends FormRequest
           'project_id.integer' => 'O ID do projeto deve ser um número inteiro.',
           'project_id.exists' => 'Esse projeto não existe.',
         ];
-      }
+    }
 
-      protected function failedValidation(Validator $validator)
-      {
-        throw new
-        HttpResponseException(response()->json($validator->error(), 422));
-      }
-  }
+    protected function failedValidation(Validator $validator){
+      throw new HttpResponseException(response()->json($validator->errors(), 422));
+    }
 }
