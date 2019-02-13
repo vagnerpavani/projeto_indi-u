@@ -2,7 +2,16 @@
    margin: 0;
    background: #3B607F;
    width: 100%;
-   height: 100vh;
+   height: 100%;
+}
+
+host:(body) {background-color: red;
+  width: 100%;
+  height: 100%;}
+
+
+bgColor = {
+  background: '#3B607F';
 }
 
 h4{
@@ -55,7 +64,7 @@ button{
   font-size: 20px;
   font-family: 'Roboto', sans-serif;
   margin-top: 5vh;
-
+  margin-left: 1vw;
 }
 
 ::placeholder{

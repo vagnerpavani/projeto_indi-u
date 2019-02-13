@@ -1,9 +1,9 @@
-<div class="bg">
+<div class="bg" [ngStyle]="bgColor">
  <div class="row " id="row1">
     <div class="titulo">
        <p>imagem</p>
     </div>
-    
+
     <form  #login="ngForm" (ngSubmit)="onSubmit(login)">
       <div class="row" id="container">
         <div class=" col l6 m8 s12 offset-l3 offset-m2" >
@@ -28,7 +28,7 @@
         </div>
    </form>
         <div class="col l4 m8 s12 offset-l4 offset-m2 cadastro ">
-            <p>Ainda nao se cadastrou ?<a routerLink="#">Cadastrar-Se</a></p>
+            <p>Ainda nao se cadastrou ?<a routerLink="/cadastro">Cadastrar-Se</a></p>
         </div>
 
 
