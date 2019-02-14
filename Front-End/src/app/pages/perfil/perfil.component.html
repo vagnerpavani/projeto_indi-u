@@ -1,0 +1,60 @@
+<div class="row" id="container-main-image">
+  <div class="container transparent" >
+    <div class="center-align">
+      <img [src]="imagemDefault" alt="" class="circle responsive-image">
+    </div>
+  </div>
+</div>
+
+
+<div class="row"  >
+    <div class="center-align" id="container-information"  >
+       <p>{{userName}}</p>
+       <i class="small material-icons" *ngFor="let icon of icons">{{ icon }}</i>
+    </div>
+</div>
+
+
+<div class="row">
+
+<!-- primaira grid da esquerda bio-->
+  <div class="col l5 offset-l1 s12">
+
+     <div class="row" id="bio">
+       <p>Bio</p>
+     </div>
+     <!--area de atuacao-->
+     <div class="row descricao" >
+        <p>Area de atuacao</p>
+      </div>
+      <!--experiencia profissional-->
+     <div class="row descricao">
+        <p>Experiencia profissional</p>
+     </div>
+  </div>
+<!--primeira grid da direita avaliacoes-->
+  <div class="col l5  s12" id="avaliacoes">
+    <p>Avalicoes</p>
+    <ul>
+
+    </ul>
+  </div>
+
+<!--trabalhos anteriores-->
+
+  <div class="row col l10 offset-l1" id="trabalhos-anteriores">
+    <p>Trabalhos anteriores</p>
+  </div>
+</div>
+<!--botoes--->
+<div class="row " id="container-button">
+  <div class="col l2 offset-l1 ">
+    <button type="button" name="button">Entrar em contato</button>
+  </div>
+  <div class="col l2 offset-l2 ">
+    <button type="button" name="button">Avaliar</button>
+  </div>
+  <div class="col l2 offset-l2 ">
+    <button type="button" name="button">Criar Projeto</button>
+  </div>
+</div>
