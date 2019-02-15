@@ -16,8 +16,8 @@ export class PerfilComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-
-     this.iconController(this.getRating(2));
+//muda numero muda avaliacoa
+     this.iconController(this.getRating(5));
 
   }
 
