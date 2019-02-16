@@ -1,0 +1,12 @@
+.bg{
+  background-color:  #3B607F;;
+   height: 100%;
+   width: 100%;
+   position: fixed;
+}
+#titulo{
+  font-size: 7vh;
+  color: white;
+  font-family: 'Roboto';
+
+}
