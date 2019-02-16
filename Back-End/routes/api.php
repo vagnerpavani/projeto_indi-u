@@ -22,7 +22,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::apiResource('user','UserController');
 Route::apiResource('project', 'ProjectController');
 Route::apiResource('work', 'WorkController');
-Route::apiResource('picture', 'PictureController');
+Route::apiResource('avaliation', 'AvaliationController');
 
 //------------------------------------------------//
 
@@ -33,4 +33,3 @@ Route::group(['middleware' => 'auth:api'], function() {
     Route::get('logout', 'API\PassportController@logout');
     Route::post('get-details', 'API\PassportController@getDetails');
 });
-

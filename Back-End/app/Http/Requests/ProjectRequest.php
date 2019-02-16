@@ -36,7 +36,7 @@ class ProjectRequest extends FormRequest
 
       if($this->isMethod('put')){
         return [
-            'name' => 'string|unique:projetcs,name'.$this->project->name,
+            'name' => 'string|unique:projects,name,',
             'description' => 'string',
             'user_id' => 'integer|exists:users,id',
         ];
