@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
 use App\User;
 use App\Http\Requests\UserRequest;
 
@@ -59,6 +58,9 @@ class UserController extends Controller
         $userUpdated->updateUser($request);
         return response()->json([$userUpdated]);
     }
+
+    
+
 
     /**
      * Remove the specified resource from storage.

@@ -24,6 +24,7 @@ class CreateUsersTable extends Migration
             $table->string('birthday')->nullable();
             $table->string('language');
             $table->string('country')->nullable();
+            $table->boolean('is_admin')->default(false);
             $table->integer('phonenumber')->nullable();
             $table->string('description')->nullable();
             $table->string('picture')->nullable();
