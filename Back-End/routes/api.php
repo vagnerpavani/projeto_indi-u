@@ -17,9 +17,20 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+//                CRUDs
 
 Route::apiResource('user','UserController');
 Route::apiResource('project', 'ProjectController');
 Route::apiResource('work', 'WorkController');
 Route::apiResource('picture', 'PictureController');
+
+//------------------------------------------------//
+
+Route::post('login', 'API\PassportController@login');
+Route::post('register', 'API\PassportController@register');
+
+Route::group(['middleware' => 'auth:api'], function() {
+    Route::get('logout', 'API\PassportController@logout');
+    Route::post('get-details', 'API\PassportController@getDetails');
+});
 
