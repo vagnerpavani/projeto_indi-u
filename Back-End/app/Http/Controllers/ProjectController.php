@@ -67,4 +67,17 @@ class ProjectController extends Controller
     }
     return response()->json("Projeto não encontrado!");
   }
+
+  public function editProject($id, ProjectRequest $request){
+    $user = Auth::user();
+    $projects = $user->projects()->get();
+
+    foreach($projects as $project){
+      if($project->id == $id){
+        $project->changeProject($request);
+        return response()->json("O projeto $project->name foi editado com sucesso!");
+      }
+    }
+    return response()->json("Projeto não encontrado!");
+  }
 }

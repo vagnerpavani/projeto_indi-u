@@ -44,4 +44,5 @@ Route::group(['middleware' => 'auth:api'], function() {
     Route::post('create-project', 'ProjectController@createProject');
     Route::get('my-projects', 'ProjectController@listProjects');
     Route::delete('delete-project/{id}', 'ProjectController@deleteProject');
+    Route::put('edit-project/{id}', 'ProjectController@editProject');
 });
