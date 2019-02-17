@@ -30,6 +30,8 @@ Route::post('login', 'API\PassportController@login');
 Route::post('register', 'API\PassportController@register');
 
 Route::group(['middleware' => 'auth:api'], function() {
+    Route::put('self-update' , 'API\PassportController@selfUpdate');
+    Route::delete('self-delete','API\PassportController@selfDelete');
     Route::get('logout', 'API\PassportController@logout');
     Route::post('get-details', 'API\PassportController@getDetails');
 });

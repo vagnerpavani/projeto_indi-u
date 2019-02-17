@@ -58,4 +58,15 @@ class PassportController extends Controller
         return response()->json( null, 204);
     }
 
+    public function selfUpdate(UserRequest $request){
+        $user = Auth::user();
+        $user->updateUser($request);
+        return response()->json([$user]);
+    }
+
+    public function selfDelete(){
+        $user = Auth::user();
+        User::destroy($user);
+        return response()->json(["O usuário $user->username foi deletado."]);
+    }
 }

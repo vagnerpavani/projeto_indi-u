@@ -60,8 +60,6 @@ class UserController extends Controller
         return response()->json([$userUpdated]);
     }
 
-    
-
 
     /**
      * Remove the specified resource from storage.
