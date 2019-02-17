@@ -54,4 +54,17 @@ class ProjectController extends Controller
     $user = Auth::user();
     return $user->projects()->get();
   }
+
+  public function deleteProject($id){
+    $user = Auth::user();
+    $projects = $user->projects()->get();
+
+    foreach($projects as $project){
+      if($project->id == $id){
+        Project::destroy($id);
+        return response()->json("O projeto $project->name foi deletado com sucesso!");
+      }
+    }
+    return response()->json("Projeto não encontrado!");
+  }
 }

@@ -43,4 +43,5 @@ Route::group(['middleware' => 'auth:api'], function() {
     Route::get('list-users', 'API\PassportController@getUsers');
     Route::post('create-project', 'ProjectController@createProject');
     Route::get('my-projects', 'ProjectController@listProjects');
+    Route::delete('delete-project/{id}', 'ProjectController@deleteProject');
 });
