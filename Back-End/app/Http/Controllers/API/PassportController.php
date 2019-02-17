@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\UserRequest;
+use App\Notifications\Register;
 use Auth;
 use App\User;
 use DB;
@@ -16,7 +17,7 @@ class PassportController extends Controller
     public function login(){
         if (Auth::attempt(['email' => request('email'), 'password' =>
         request('password')])){
-        
+
         $user = Auth::user();
         $success['token'] = $user -> createToken('MyApp') -> accessToken;
         return response() -> json(['success' => $success], $this ->
@@ -28,7 +29,7 @@ class PassportController extends Controller
     }
 
     public function register(UserRequest $request) {
-        
+
         $newUser = new User;
         $newUser->name = $request->name;
         $newUser->username = $request->username;
@@ -36,6 +37,7 @@ class PassportController extends Controller
         $newUser->password = bcrypt($request->password);
         $newUser->language = $request->language;
         $newUser->save();
+        $newUser->notify(new Register($newUser));
         $success['token'] = $newUser->createToken('MyApp')->accessToken;
         $success['name'] = $newUser->name;
         return response() -> json(['success' => $success], $this ->
@@ -45,7 +47,7 @@ class PassportController extends Controller
     public function getDetails() {
         $user = Auth::user();
         return response() -> json(['success' => $user], $this ->
-        successStatus); 
+        successStatus);
     }
 
     public function logout(){
