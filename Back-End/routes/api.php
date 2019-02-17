@@ -17,7 +17,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-//                CRUDs
+//                CRUDs para ADMINS
 
 Route::apiResource('user','UserController');
 Route::apiResource('project', 'ProjectController');
@@ -26,12 +26,19 @@ Route::apiResource('avaliation', 'AvaliationController');
 
 //------------------------------------------------//
 
+
+
 Route::post('login', 'API\PassportController@login');
 Route::post('register', 'API\PassportController@register');
+
+//              ROTAS PARA USUÁRIOS LOGADOS
 
 Route::group(['middleware' => 'auth:api'], function() {
     Route::put('self-update' , 'API\PassportController@selfUpdate');
     Route::delete('self-delete','API\PassportController@selfDelete');
     Route::get('logout', 'API\PassportController@logout');
-    Route::post('get-details', 'API\PassportController@getDetails');
+    Route::get('get-details', 'API\PassportController@getDetails');
+    Route::get('list-projects', 'API\PassportController@getProjects');
+    Route::get('list-works', 'API\PassportController@getWorks');
+    Route::get('list-users', 'API\PassportController@getUsers');
 });
