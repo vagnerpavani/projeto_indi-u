@@ -8,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class PerfilComponent implements OnInit {
 
   userName: String = 'Default Name';
-  imagemDefault:String = 'https://image.flaticon.com/icons/png/512/149/149071.png';
-  imagemMain: String ='https://i.pinimg.com/originals/59/5f/e2/595fe2fd04aa8f73ba0ad94e298bd656.png'
+  imagemDefault:String = '../../assets/userDefault.png';
+  imagemMain: String ='https://i.pinimg.com/originals/59/5f/e2/595fe2fd04aa8f73ba0ad94e298bd656.png';
   icons:string[] = [this.iconsTipes(false),this.iconsTipes(false),this.iconsTipes(false),this.iconsTipes(false),this.iconsTipes(false)];
-
+  mainImageDefault = "../../assets/imagemDefundoDefault.jpeg";
 
   constructor() { }
 
@@ -54,6 +54,11 @@ export class PerfilComponent implements OnInit {
   getRating(numero:number){
 
      return numero;
+  }
+
+  userImageDisplay(user){
+    //caso o pegado do banco de dados nao funcione pegar a imagem default
+    //pegar a imagem
   }
 
 }

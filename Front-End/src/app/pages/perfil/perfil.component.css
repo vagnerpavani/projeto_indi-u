@@ -1,6 +1,8 @@
 #container-main-image{
-  background:red;
+  border: 1px solid #5E9ACC;
   padding-top:20vh;
+  position:static;
+
 }
 
 .container{
@@ -16,6 +18,7 @@ img{
 }
 p{
   margin-bottom: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 #container-information{
@@ -30,6 +33,8 @@ p{
 i{
   color:#3B607F;
 }
+
+
 
 #bio{
   padding-bottom: 20vh;
@@ -50,7 +55,7 @@ i{
 
   border-radius: 5px;
   border:1px solid #5E9ACC;
-  padding-bottom: 57vh;
+  padding-bottom: 48.4vh;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -61,8 +66,8 @@ i{
   border:1px solid #5E9ACC;
   padding-bottom: 40vh;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-top: 1vh;
 
-  margin-left:9vw ;
 }
 
 #container-button{
@@ -72,10 +77,15 @@ i{
 
 button{
 
-  width:  20.05856515373353vw;
-  height: 7.981220657276995vh;
   background: #00BCD4;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
   position: relative;
+
+}
+
+.title-box{
+  margin-top: 0;
+  margin-left: 1vw;
+  color: gray;
 }

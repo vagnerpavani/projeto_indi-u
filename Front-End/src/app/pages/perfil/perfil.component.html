@@ -1,60 +1,66 @@
-<div class="row" id="container-main-image">
-  <div class="container transparent" >
-    <div class="center-align">
-      <img [src]="imagemDefault" alt="" class="circle responsive-image">
+<!--imagem principal + imagem usuario-->
+<div class="row center-align" id="container-main-image" > <!--[style.background]="respostaDoBd ? urlDoBD : imagemDefault -->
+
+    <div class="container">
+      <img [src]="imagemDefault"  class="circle responsive-image center-align">
+      <i class="material-icons right-align">add</i>
     </div>
-  </div>
+
 </div>
 
-
-<div class="row"  >
-    <div class="center-align" id="container-information"  >
+<!--nome + rating-->
+<div class="row center-align" id="container-information">
        <p>{{userName}}</p>
        <i class="small material-icons" *ngFor="let icon of icons">{{ icon }}</i>
-    </div>
 </div>
-
-
-<div class="row">
 
 <!-- primaira grid da esquerda bio-->
-  <div class="col l5 offset-l1 s12">
+<div class="row">
 
-     <div class="row" id="bio">
-       <p>Bio</p>
+     <div class="col l10 s12 offset-l1 ">
+
+       <!--bio-->
+       <div class="col l5 offset-l1 s12">
+         <div class="row" id="bio">
+           <p class="title-box">Bio</p>
+         </div>
+
+         <!--area de atuacao-->
+         <div class="row descricao" >
+           <p class="title-box">Area de atuacao</p>
+         </div>
+
+         <!--experiencia profissional-->
+         <div class="row descricao">
+           <p class="title-box">Experiencia profissional</p>
+         </div>
+       </div>
+
+       <!--primeira grid da direita avaliacoes-->
+       <div class="col l5  s12" id="avaliacoes">
+         <p class="title-box">Avalicoes</p>
+         <ul>
+         </ul>
+       </div>
+
+       <!--trabalhos anteriores-->
+       <div class="row center-align">
+         <div class="col l10 offset-l1 s12 center-align" id="trabalhos-anteriores">
+           <p class="title-box">Trabalhos anteriores</p>
+         </div>
+       </div>
      </div>
-     <!--area de atuacao-->
-     <div class="row descricao" >
-        <p>Area de atuacao</p>
-      </div>
-      <!--experiencia profissional-->
-     <div class="row descricao">
-        <p>Experiencia profissional</p>
-     </div>
-  </div>
-<!--primeira grid da direita avaliacoes-->
-  <div class="col l5  s12" id="avaliacoes">
-    <p>Avalicoes</p>
-    <ul>
-
-    </ul>
-  </div>
-
-<!--trabalhos anteriores-->
-
-  <div class="row col l10 offset-l1" id="trabalhos-anteriores">
-    <p>Trabalhos anteriores</p>
-  </div>
 </div>
+
+
+
 <!--botoes--->
 <div class="row " id="container-button">
-  <div class="col l2 offset-l1 ">
+  <div class="col l5 offset-l1  center-align">
     <button type="button" name="button">Entrar em contato</button>
   </div>
-  <div class="col l2 offset-l2 ">
-    <button type="button" name="button">Avaliar</button>
-  </div>
-  <div class="col l2 offset-l2 ">
+
+  <div class="col l5   center-align">
     <button type="button" name="button">Criar Projeto</button>
   </div>
 </div>
