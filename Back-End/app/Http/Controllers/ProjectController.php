@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Project;
+use App\User;
+use Auth;
+use DB;
 use App\Http\Resources\ProjectResource;
 use App\Http\Requests\ProjectRequest;
 
@@ -34,5 +37,16 @@ class ProjectController extends Controller
     $project = Project::findOrFail($id);
     Project::destroy($id);
     return response()->json("O projeto $project->name foi deletado com sucesso!");
+  }
+
+  public function createProject(ProjectRequest $request){
+    $user = Auth::user();
+    $project = new Project;
+    $project->name = $request->name;
+    $project->description = $request->description;
+    $project->user_id = $user->id;
+
+    $project->save();
+    return new ProjectResource($project);
   }
 }
