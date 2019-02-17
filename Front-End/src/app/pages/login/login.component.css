@@ -55,17 +55,26 @@ input[type=password]{
 
 }
 
+::placeholder{
+  color: gray;
+}
+
 button{
   width: 100%;
   border-radius: 25px;
   font-size: 20px;
   font-family: 'Roboto', sans-serif;
+  background-color: #00BCD4;
 
 }
 
-::placeholder{
-  color: #7C7C7C;
-  padding-right: 10vw;
+
+button:hover{
+  background-color: #00BCD5;
+}
+
+.waves-effect{
+  background-color: light-blue;
 }
 
 #cadastro{

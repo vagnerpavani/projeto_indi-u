@@ -1,5 +1,90 @@
-<div class="bg">
+<div id="bg">
+     <!--titulo-->
       <div class="center-align" id="titulo">
           <p>Cadastro</p>
       </div>
+
+
+    <form #cadastro="ngForm" (ngSubmit)='onSubmit(cadastro)'>
+        <div class="row" id="row1">
+          <div class=" col l6 m8 s10 offset-l3 offset-m2 offset-s1" >
+
+          <!--usuario-->
+           <div class="row">
+             <p>Nome</p>
+            <input id="usuario" class="center-align"type="text" placeholder="usuario" name="usuario" ngModel required>
+           </div>
+
+          <!--email-->
+          <div class="row">
+            <p>{{ textEmail }}</p>
+             <input id="email" class="center-align" type="text" placeholder="Email" name="email" ngModel required #email="ngModel" (blur)="emailError(email)">
+           </div>
+           <div *ngIf="emailError||email.touched" >
+             <p class="invalido">email invalido</p>
+           </div>
+
+          <!--nome_usuario-->
+          <div class="row">
+            <p>nome usuario</p>
+            <input id="nome_usuario" class="center-align" type="text" placeholder="nome do usuario" name="nam_usuario" ngModel required>
+           </div>
+
+           <!--senha-->
+
+          <div class="row">
+             <p>{{textoSenha}}</p>
+             <input id="senha" class="center-align" type="password" placeholder="senha" name="senha" ngModel required #senha="ngModel" (blur)="checkPassword(senha)">
+          </div>
+          <div *ngIf="passwordError || senha.touched" >
+            <p class="invalido" id="senha-text">senha invalida</p>
+          </div>
+
+           <!--confirmacao da senha-->
+           <div class="row">
+             <p>{{confirmar_senha}}</p>
+             <input id="senha_confirm" class="center-align" type="password" placeholder="confirmar senha" name="senha_confirm" ngModel required #confirmarSenha="ngModel" (blur)="checkConfirmPassword(senha,confirmarSenha)">
+           </div>
+           <div *ngIf="confirm_passwordError || confirmarSenha.touched">
+             <p class="invalido">senha invalida</p>
+           </div>
+
+           <!--data de nascimento-->
+           <div class="row">
+             <p>data de nascimento</p>
+             <input id="data_de_nascimento" class="center-align" type="text" placeholder="DD/MM/YY" name="data_de_nascimento" ngModel required>
+           </div>
+
+           <!--Telefone-->
+           <div class="row">
+             <p>telefone</p>
+             <input id="telefone" class="center-align" type="text" placeholder="telefone" name="telefone" ngModel required>
+           </div>
+
+           <!--pais-->
+           <div class="row">
+             <p>pais</p>
+             <input id="pais" class="center-align" type="text" placeholder="Pais" name="pais" ngModel required>
+           </div>
+
+           <!--lingua-->
+           <div class="row">
+             <p>lingua</p>
+             <input id="lingua" class="center-align" type="text" placeholder="lingua" name="lingua" ngModel required>
+           </div>
+
+           <!--icone de camera-->
+           <div class="row">
+             <p>imagem de perfil</p>
+             <input id="imagem_camera" class="left-align" type="file" placeholder="imagem camera" name="icon_camera" ngModel >
+           </div>
+
+           <div class="row">
+               <!--botao-->
+               <button class="waves-effect waves-light btn center-align" type="submit" [disabled]="cadastro.invalid||passwordError">Cadastrar-se</button>
+           </div>
+
+     </div>
+    </div>
+  </form>
 </div>
