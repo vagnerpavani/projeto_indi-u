@@ -49,4 +49,9 @@ class ProjectController extends Controller
     $project->save();
     return new ProjectResource($project);
   }
+
+  public function listProjects(){
+    $user = Auth::user();
+    return $user->projects()->get();
+  }
 }

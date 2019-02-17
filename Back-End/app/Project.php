@@ -24,4 +24,8 @@ class Project extends Model
 
       $this->save();
     }
+
+    public function user(){
+      return $this->belongsTo('App\User');
+    }
 }

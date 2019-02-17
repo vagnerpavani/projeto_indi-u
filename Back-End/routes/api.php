@@ -42,4 +42,5 @@ Route::group(['middleware' => 'auth:api'], function() {
     Route::get('list-works', 'API\PassportController@getWorks');
     Route::get('list-users', 'API\PassportController@getUsers');
     Route::post('create-project', 'ProjectController@createProject');
+    Route::get('my-projects', 'ProjectController@listProjects');
 });
