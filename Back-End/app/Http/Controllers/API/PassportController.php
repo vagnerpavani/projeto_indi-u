@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\UserRequest;
 use App\Notifications\Register;
+use App\Notifications\Edit;
+use App\Notifications\Delete;
 use Auth;
 use App\User;
 use DB;
@@ -60,12 +62,14 @@ class PassportController extends Controller
 
     public function selfUpdate(UserRequest $request){
         $user = Auth::user();
+        $user->notify(new Edit($user));
         $user->updateUser($request);
         return response()->json([$user]);
     }
 
     public function selfDelete(){
         $user = Auth::user();
+        $user->notify(new Delete($user));
         User::destroy($user);
         return response()->json(["O usuário $user->username foi deletado."]);
     }
