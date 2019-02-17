@@ -5,8 +5,8 @@ namespace App\Http\Controllers\API;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\UserRequest;
-use Auth;
 use App\User;
+use Auth;
 use DB;
 
 class PassportController extends Controller
@@ -56,4 +56,15 @@ class PassportController extends Controller
         return response()->json( null, 204);
     }
 
+    public function selfUpdate(UserRequest $request){
+        $user = Auth::user();
+        $user->updateUser($request);
+        return response()->json([$user]);
+    }
+
+    public function selfDelete(){
+        $user = Auth::user();
+        User::destroy($user);
+        return response()->json(["O usuário $user->username foi deletado."]);
+    }
 }

@@ -44,8 +44,8 @@ class UserRequest extends FormRequest
         if ($this->isMethod('put')){
             return [
                 'name' => 'string',
-                'username' => 'string|unique:users,username,'.$this->user->username, 
-                'email' => 'email|unique:users,email,'.$this->user->email,
+                'username' => 'string|unique:users',
+                'email' => 'email|unique:users',
                 'password' => 'min:8',
                 'repository' => 'url|nullable',
                 'projects_done' => 'integer|nullable',
