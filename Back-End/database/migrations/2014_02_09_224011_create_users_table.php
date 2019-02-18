@@ -20,10 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('email')->unique();
             $table->string('repository')->nullable();
-            $table->integer('projects_done')->nullable();
             $table->string('birthday')->nullable();
-            $table->string('language');
-            $table->string('country')->nullable();
             $table->integer('phone_number')->nullable();
             $table->boolean('is_admin')->default(false);
             $table->integer('phonenumber')->nullable();

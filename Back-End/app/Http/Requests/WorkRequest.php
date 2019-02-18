@@ -29,7 +29,6 @@ class WorkRequest extends FormRequest
         return [
             'duty' => 'required|string',
             'user_id' => 'nullable|integer|exists:users,id',
-            'project_id' => 'required|integer|exists:projects,id',
         ];
       }
 
