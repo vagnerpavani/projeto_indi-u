@@ -43,6 +43,16 @@ class User extends Authenticatable
         $this->description = $request->description;
         $this->picture = $request->picture;
 
+        $file = $request->file('picture');
+        $filename = 'pic.'.$file->getClientOriginalExtension();
+
+        if (!Storage::exists('localPhotos/')){
+            Storage::makeDirectory('localPhotos/',0775,true);
+        }
+
+        $path = $file->storeAs('localPhotos', $filename);
+        $this->picture = $path;
+
         $this->save();
     }
 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\UserRequest;
 
 class UserController extends Controller
@@ -72,5 +73,10 @@ class UserController extends Controller
         $user = User::findOrFail($id);
         User::destroy($id);
         return response()->json(["O usuário $user->username foi deletado."]);
+    }
+
+    public function downloadPic($id){
+        $user = User::findOrFail($id);
+        return response()->download(storage_path('app/'.$user->picture));
     }
 }

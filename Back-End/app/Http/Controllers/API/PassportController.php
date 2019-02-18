@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\UserRequest;
 use App\Notifications\Register;
 use App\Notifications\Edit;
@@ -39,6 +40,21 @@ class PassportController extends Controller
         $newUser->username = $request->username;
         $newUser->email = $request->email;
         $newUser->password = bcrypt($request->password);
+        $newUser->picture = $request->picture;
+
+        $file = $request->file('picture');
+        $filename = 'pic.'.$file->getClientOriginalExtension();
+
+        if (!Storage::exists('localPhotos/')){
+            Storage::makeDirectory('localPhotos/',0775,true);
+        }
+
+        $path = $file->storeAs('localPhotos', $filename);
+        $newUser->picture = $path;
+
+        $newUser->save();
+
+
         $newUser->save();
         $newUser->notify(new Register($newUser));
         $success['token'] = $newUser->createToken('MyApp')->accessToken;

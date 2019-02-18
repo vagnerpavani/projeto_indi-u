@@ -35,7 +35,7 @@ class UserRequest extends FormRequest
                 'birthday' => 'string|nullable|max:10|min:10',
                 'phone_number' => 'integer|nullable',
                 'description' => 'string|nullable',
-                'picture' => 'string|nullable',
+                'picture' => 'nullable|file|image|mimes:jpeg,png,gif,webp|max:2048',
             ];
         }
         if ($this->isMethod('put')){
@@ -48,7 +48,7 @@ class UserRequest extends FormRequest
                 'birthday' => 'string|nullable',
                 'phone_number' => 'integer|nullable',
                 'description' => 'string|nullable',
-                'picture' => 'string|nullable',
+                'picture' => 'file|image|mimes:jpeg,png,gif,webp|max:2048',
             ];
         }
     }

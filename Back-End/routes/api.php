@@ -38,6 +38,7 @@ Route::group(['middleware' => 'auth:api'], function() {
     Route::delete('delete-project/{id}', 'ProjectController@deleteProject');
     Route::put('edit-project/{id}', 'ProjectController@editProject');
     Route::post('get-details', 'API\PassportController@getDetails');
+    Route::get('get-pic/{id}', 'UserController@downloadPic');
 
     Route::group(['middleware' => 'admin',], function ($router) {
 
