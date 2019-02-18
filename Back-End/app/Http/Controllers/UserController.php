@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\UserRequest;
 
+
 class UserController extends Controller
 {
     /**
@@ -28,6 +29,7 @@ class UserController extends Controller
      */
     public function store(UserRequest $request)
     {
+
         $new_user = New User;
         $new_user->insertUser($request);
 

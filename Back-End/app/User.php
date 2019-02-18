@@ -66,13 +66,30 @@ class User extends Authenticatable
         if($request->birthday) $this->birthday = $request->birthday;
         if($request->phone_number) $this->phone_number = $request->phone_number;
         if($request->description) $this->description = $request->description;
-        if($request->picture) $this->picture = $request->picture;
+        if($request->picture){
+
+            $this->picture = $request->picture;
+
+
+            $file = $request->file('picture');
+            $filename = 'pic.'.$file->getClientOriginalExtension();
+
+            if (!Storage::exists('localPhotos/')){
+                Storage::makeDirectory('localPhotos/',0775,true);
+            }
+
+            $path = $file->storeAs('localPhotos', $filename);
+            $this->picture = $path;
+        }
 
         $this->save();
     }
 
+
+
     public function projects(){
         return $this->hasMany('App\Project');
     }
+
 
 }
