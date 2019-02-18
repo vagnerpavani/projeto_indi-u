@@ -38,10 +38,7 @@ class User extends Authenticatable
         $this->password = $request->password;
         $this->email = $request->email;
         $this->repository = $request->repository;
-        $this->projects_done = $request->projects_done;
         $this->birthday = $request->birth;
-        $this->language = $request->language;
-        $this->country = $request->country;
         $this->phone_number = $request->phone_number;
         $this->description = $request->description;
         $this->picture = $request->picture;
@@ -56,10 +53,7 @@ class User extends Authenticatable
         if($request->password)$this->password = $request->password;
         if($request->email) $this->email = $request->email;
         if($request->repository) $this->repository = $request->repository;
-        if($request->projects_done) $this->projects_done = $request->projects_done;
         if($request->birthday) $this->birthday = $request->birthday;
-        if($request->language) $this->language = $request->language;
-        if($request->country) $this->country = $request->country;
         if($request->phone_number) $this->phone_number = $request->phone_number;
         if($request->description) $this->description = $request->description;
         if($request->picture) $this->picture = $request->picture;
@@ -70,4 +64,5 @@ class User extends Authenticatable
     public function projects(){
         return $this->hasMany('App\Project');
     }
+
 }
