@@ -30,13 +30,12 @@ class ProjectRequest extends FormRequest
         return [
             'name' => 'required|string|unique:projects,name',
             'description' => 'nullable|string',
-            'user_id' => 'required|integer|exists:users,id',
         ];
       }
 
       if($this->isMethod('put')){
         return [
-            'name' => 'string|unique:projetcs,name'.$this->project->name,
+            'name' => 'string|unique:projects,name,',
             'description' => 'string',
             'user_id' => 'integer|exists:users,id',
         ];
@@ -59,6 +58,6 @@ class ProjectRequest extends FormRequest
     protected function failedValidation(Validator $validator)
     {
       throw new
-      HttpResponseException(response()->json($validator->error(), 422));
+      HttpResponseException(response()->json($validator->errors(), 422));
     }
 }

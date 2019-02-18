@@ -24,4 +24,16 @@ class Project extends Model
 
       $this->save();
     }
+
+    public function user(){
+      return $this->belongsTo('App\User');
+    }
+
+    public function workers(){
+      return $this->belongsToMany('App\User');
+    }
+
+    public function works(){
+      return $this->hasMany('App\Work');
+    }
 }
