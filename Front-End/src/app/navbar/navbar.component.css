@@ -10,3 +10,7 @@ nav {
 .dropdown-content {
 	width: auto !important;
 }
+
+span {
+	color: #ffffff;
+}
