@@ -15,16 +15,8 @@ use Illuminate\Http\Request;
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
+
 });
-
-//                CRUDs para ADMINS
-
-Route::apiResource('user','UserController');
-Route::apiResource('project', 'ProjectController');
-Route::apiResource('work', 'WorkController');
-Route::apiResource('avaliation', 'AvaliationController');
-
-//------------------------------------------------//
 
 
 
@@ -45,4 +37,13 @@ Route::group(['middleware' => 'auth:api'], function() {
     Route::get('my-projects', 'ProjectController@listProjects');
     Route::delete('delete-project/{id}', 'ProjectController@deleteProject');
     Route::put('edit-project/{id}', 'ProjectController@editProject');
+    Route::post('get-details', 'API\PassportController@getDetails');
+
+    Route::group(['middleware' => 'admin',], function ($router) {
+
+        Route::apiResource('project', 'ProjectController');
+        Route::apiResource('work', 'WorkController');
+        Route::apiResource('avaliation', 'AvaliationController');
+        Route::apiResource('user','UserController');
+    });
 });
