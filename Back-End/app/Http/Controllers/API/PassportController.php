@@ -41,24 +41,23 @@ class PassportController extends Controller
         $newUser->username = $request->username;
         $newUser->email = $request->email;
         $newUser->password = bcrypt($request->password);
-        $newUser->picture = $request->picture;
-
         $creation = new Carbon;
         $creation = Carbon::now();
 
+        if($request->picture){
+          $newUser->picture = $request->picture;
 
-        $file = $request->file('picture');
-        $filename = 'pic.'.$file->getClientOriginalExtension();
 
-        if (!Storage::exists('localPhotos/')){
-            Storage::makeDirectory('localPhotos/',0775,true);
+          $file = $request->file('picture');
+          $filename = 'pic.'.$file->getClientOriginalExtension();
+
+          if (!Storage::exists('localPhotos/')){
+              Storage::makeDirectory('localPhotos/',0775,true);
+          }
+
+          $path = $file->storeAs('localPhotos', $filename);
+          $newUser->picture = $path;
         }
-
-        $path = $file->storeAs('localPhotos', $filename);
-        $newUser->picture = $path;
-
-        $newUser->save();
-
 
         $newUser->save();
         $newUser->notify(new Register($newUser));
