@@ -26,23 +26,32 @@ Route::post('register', 'API\PassportController@register');
 //              ROTAS PARA USUÁRIOS LOGADOS
 
 Route::group(['middleware' => 'auth:api'], function() {
+    //Rotas relacionadas a USER
     Route::put('self-update' , 'API\PassportController@selfUpdate');
     Route::delete('self-delete','API\PassportController@selfDelete');
     Route::get('logout', 'API\PassportController@logout');
     Route::get('get-details', 'API\PassportController@getDetails');
-    Route::get('list-projects', 'API\PassportController@getProjects');
-    Route::get('list-works', 'API\PassportController@getWorks');
     Route::get('list-users', 'API\PassportController@getUsers');
+    Route::post('get-details', 'API\PassportController@getDetails');
+    Route::get('get-pic/{id}', 'UserController@downloadPic');
+
+    //Rotas relacionadas a PROJECT
+    Route::get('list-projects', 'API\PassportController@getProjects');
     Route::post('create-project', 'ProjectController@createProject');
     Route::get('my-projects', 'ProjectController@listProjects');
     Route::delete('delete-project/{id}', 'ProjectController@deleteProject');
     Route::put('edit-project/{id}', 'ProjectController@editProject');
-    Route::post('get-details', 'API\PassportController@getDetails');
+
+    //Rotas relacionadas a WORK
+    Route::get('list-works', 'API\PassportController@getWorks');
     Route::post('new-work/{id}', 'WorkController@newWork');
     Route::get('list-works/{id}', 'WorkController@listWorks');
     Route::put('edit-work/{idProject}/{idWork}', 'WorkController@editWork');
     Route::delete('delete-work/{idProject}/{idWork}', 'WorkController@deleteWork');
 
+
+
+    //Rotas de ADMIN
     Route::group(['middleware' => 'admin',], function ($router) {
 
         Route::apiResource('project', 'ProjectController');

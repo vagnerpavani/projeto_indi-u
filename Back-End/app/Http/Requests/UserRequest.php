@@ -32,13 +32,10 @@ class UserRequest extends FormRequest
                 'email' => 'required|email|unique:users',
                 'password' => 'required|min:8',
                 'repository' => 'url|nullable',
-                'projects_done' => 'integer|nullable',
                 'birthday' => 'string|nullable|max:10|min:10',
-                'language' => 'string',
-                'country' => 'string|nullable',
                 'phone_number' => 'integer|nullable',
                 'description' => 'string|nullable',
-                'picture' => 'string|nullable',
+                'picture' => 'nullable|file|image|mimes:jpeg,png,gif,webp|max:2048',
             ];
         }
         if ($this->isMethod('put')){
@@ -48,13 +45,10 @@ class UserRequest extends FormRequest
                 'email' => 'email|unique:users',
                 'password' => 'min:8',
                 'repository' => 'url|nullable',
-                'projects_done' => 'integer|nullable',
                 'birthday' => 'string|nullable',
-                'language' => 'string',
-                'country' => 'string|nullable',
                 'phone_number' => 'integer|nullable',
                 'description' => 'string|nullable',
-                'picture' => 'string|nullable',
+                'picture' => 'file|image|mimes:jpeg,png,gif,webp|max:2048',
             ];
         }
     }
@@ -70,7 +64,6 @@ class UserRequest extends FormRequest
         'password.min' => 'Insira uma senha de pelo menos 8 characteres',
         'password.required'=> 'A senha é necessaria',
         'repository.url' => 'Insira um link url https:// www.exemplo.com',
-        'projects_done.integer' => 'Por favor insira um número.',
         'phone_number.integer'=> 'Por favor insira apenas números',
         ];
     }

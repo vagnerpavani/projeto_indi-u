@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\UserRequest;
 use App\Notifications\Register;
 use App\Notifications\Edit;
@@ -13,6 +14,7 @@ use App\User;
 use App\Project;
 use App\Work;
 use DB;
+use Carbon\Carbon;
 
 class PassportController extends Controller
 {
@@ -39,19 +41,40 @@ class PassportController extends Controller
         $newUser->username = $request->username;
         $newUser->email = $request->email;
         $newUser->password = bcrypt($request->password);
-        $newUser->language = $request->language;
+        $newUser->picture = $request->picture;
+
+        $creation = new Carbon;
+        $creation = Carbon::now();
+
+
+        $file = $request->file('picture');
+        $filename = 'pic.'.$file->getClientOriginalExtension();
+
+        if (!Storage::exists('localPhotos/')){
+            Storage::makeDirectory('localPhotos/',0775,true);
+        }
+
+        $path = $file->storeAs('localPhotos', $filename);
+        $newUser->picture = $path;
+
+        $newUser->save();
+
+
         $newUser->save();
         $newUser->notify(new Register($newUser));
         $success['token'] = $newUser->createToken('MyApp')->accessToken;
         $success['name'] = $newUser->name;
-        return response() -> json(['success' => $success], $this ->
-        successStatus);
+        return response() -> json(['success' => $success , $creation], $this ->successStatus);
     }
 
     public function getDetails() {
         $user = Auth::user();
         return response() -> json(['success' => $user], $this ->
         successStatus);
+    }
+
+    public function getCreationHour(){
+
     }
 
     public function logout(){
