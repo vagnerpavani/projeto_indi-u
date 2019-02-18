@@ -11,7 +11,7 @@ class Avaliation extends Model
     $this->grade = $request->grade;
     $this->id_user_measurer = $request->id_user_measurer;
     $this->id_user_measured = $request->id_user_measured;
-    
+
     $this->save();
   }
 
@@ -22,5 +22,9 @@ class Avaliation extends Model
       $this->grade = $request->grade;
 
     $this->save();
+  }
+
+  public function user(){
+    return $this->belongsTo('App\User');
   }
 }

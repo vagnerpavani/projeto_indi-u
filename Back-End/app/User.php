@@ -92,6 +92,10 @@ class User extends Authenticatable
     }
 
 
+    public function avaliations(){
+      return $this->hasMany('App\Avaliation', 'id_user_measured');
+    }
+
     public function works(){
       return $this->belongsToMany('App\Work');
     }

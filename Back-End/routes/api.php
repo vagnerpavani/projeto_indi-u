@@ -42,18 +42,23 @@ Route::group(['middleware' => 'auth:api'], function() {
     Route::delete('delete-project/{id}', 'ProjectController@deleteProject');
     Route::put('edit-project/{id}', 'ProjectController@editProject');
 
+    
+
+
     //Rotas relacionadas a WORK
     Route::get('list-works', 'API\PassportController@getWorks');
     Route::post('new-work/{id}', 'WorkController@newWork');
     Route::get('list-works/{id}', 'WorkController@listWorks');
     Route::put('edit-work/{idProject}/{idWork}', 'WorkController@editWork');
     Route::delete('delete-work/{idProject}/{idWork}', 'WorkController@deleteWork');
-
-
+    
+    //Rotas de avaliação
+    Route::post('get-details', 'API\PassportController@getDetails');
+    Route::post('give-avaliation', 'AvaliationController@createAvaliation');
+    Route::get('my-avaliations', 'AvaliationController@listAvaliations');
 
     //Rotas de ADMIN
     Route::group(['middleware' => 'admin',], function ($router) {
-
         Route::apiResource('project', 'ProjectController');
         Route::apiResource('work', 'WorkController');
         Route::apiResource('avaliation', 'AvaliationController');
