@@ -27,10 +27,10 @@ Route::post('register', 'API\PassportController@register');
 
 Route::group(['middleware' => 'auth:api'], function() {
     //Rotas relacionadas a USER
+
     Route::put('self-update' , 'API\PassportController@selfUpdate');
     Route::delete('self-delete','API\PassportController@selfDelete');
     Route::get('logout', 'API\PassportController@logout');
-    Route::get('get-details', 'API\PassportController@getDetails');
     Route::get('list-users', 'API\PassportController@getUsers');
     Route::post('get-details', 'API\PassportController@getDetails');
     Route::get('get-pic/{id}', 'UserController@downloadPic');
@@ -42,7 +42,7 @@ Route::group(['middleware' => 'auth:api'], function() {
     Route::delete('delete-project/{id}', 'ProjectController@deleteProject');
     Route::put('edit-project/{id}', 'ProjectController@editProject');
 
-    
+
 
 
     //Rotas relacionadas a WORK
@@ -51,9 +51,8 @@ Route::group(['middleware' => 'auth:api'], function() {
     Route::get('list-works/{id}', 'WorkController@listWorks');
     Route::put('edit-work/{idProject}/{idWork}', 'WorkController@editWork');
     Route::delete('delete-work/{idProject}/{idWork}', 'WorkController@deleteWork');
-    
+
     //Rotas de avaliação
-    Route::post('get-details', 'API\PassportController@getDetails');
     Route::post('give-avaliation', 'AvaliationController@createAvaliation');
     Route::get('my-avaliations', 'AvaliationController@listAvaliations');
 
