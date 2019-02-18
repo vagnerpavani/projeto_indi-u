@@ -28,7 +28,7 @@ class AvaliationController extends Controller
   }
 
   public function update(AvaliationRequest $request, $id){
-      $avalation = Avalation::findOrFail($id);
+      $avaliation = Avaliation::findOrFail($id);
       $avaliation->changeAvaliation($request);
       return new AvaliationResource($avaliation);
   }

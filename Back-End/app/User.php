@@ -38,20 +38,22 @@ class User extends Authenticatable
         $this->password = $request->password;
         $this->email = $request->email;
         $this->repository = $request->repository;
-        $this->birthday = $request->birth;
+        $this->birthday = $request->birthday;
         $this->phone_number = $request->phone_number;
         $this->description = $request->description;
-        $this->picture = $request->picture;
 
-        $file = $request->file('picture');
-        $filename = 'pic.'.$file->getClientOriginalExtension();
+        if($request->picture){
+          $this->picture = $request->picture;
+          $file = $request->file('picture');
+          $filename = 'pic.'.$file->getClientOriginalExtension();
 
-        if (!Storage::exists('localPhotos/')){
-            Storage::makeDirectory('localPhotos/',0775,true);
+          if (!Storage::exists('localPhotos/')){
+              Storage::makeDirectory('localPhotos/',0775,true);
+          }
+
+          $path = $file->storeAs('localPhotos', $filename);
+          $this->picture = $path;
         }
-
-        $path = $file->storeAs('localPhotos', $filename);
-        $this->picture = $path;
 
         $this->save();
     }
@@ -100,4 +102,3 @@ class User extends Authenticatable
       return $this->belongsToMany('App\Work');
     }
 }
-
