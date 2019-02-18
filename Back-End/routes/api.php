@@ -38,6 +38,10 @@ Route::group(['middleware' => 'auth:api'], function() {
     Route::delete('delete-project/{id}', 'ProjectController@deleteProject');
     Route::put('edit-project/{id}', 'ProjectController@editProject');
     Route::post('get-details', 'API\PassportController@getDetails');
+    Route::post('new-work/{id}', 'WorkController@newWork');
+    Route::get('list-works/{id}', 'WorkController@listWorks');
+    Route::put('edit-work/{idProject}/{idWork}', 'WorkController@editWork');
+    Route::delete('delete-work/{idProject}/{idWork}', 'WorkController@deleteWork');
 
     Route::group(['middleware' => 'admin',], function ($router) {
 
