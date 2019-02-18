@@ -91,8 +91,8 @@ class WorkController extends Controller
         $works = $project->works()->get();
         foreach($works as $work){
           if($work->id == $idWork){
-            return response()->json("A vaga para $work->duty do projeto $project->name foi deletada com sucesso!");
             Work::destroy($idWork);
+            return response()->json("A vaga para $work->duty do projeto $project->name foi deletada com sucesso!");
           }
         }
         return response()->json("Vaga não encontrada.");
