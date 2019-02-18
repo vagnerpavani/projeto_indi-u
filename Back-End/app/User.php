@@ -70,4 +70,8 @@ class User extends Authenticatable
     public function projects(){
         return $this->hasMany('App\Project');
     }
+
+    public function avaliations(){
+      return $this->hasMany('App\Avaliation', 'id_user_measured');
+    }
 }

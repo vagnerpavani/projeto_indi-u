@@ -30,7 +30,6 @@ class AvaliationRequest extends FormRequest
           return [
               'comment' => 'required|string',
               'grade' => 'required|integer',
-              'id_user_measurer' => 'required|integer|exists:users,id',
               'id_user_measured' => 'required|integer|exists:users,id',
           ];
       }

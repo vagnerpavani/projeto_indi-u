@@ -38,9 +38,10 @@ Route::group(['middleware' => 'auth:api'], function() {
     Route::delete('delete-project/{id}', 'ProjectController@deleteProject');
     Route::put('edit-project/{id}', 'ProjectController@editProject');
     Route::post('get-details', 'API\PassportController@getDetails');
+    Route::post('give-avaliation', 'AvaliationController@createAvaliation');
+    Route::get('my-avaliations', 'AvaliationController@listAvaliations');
 
     Route::group(['middleware' => 'admin',], function ($router) {
-
         Route::apiResource('project', 'ProjectController');
         Route::apiResource('work', 'WorkController');
         Route::apiResource('avaliation', 'AvaliationController');

@@ -17,6 +17,7 @@ class AvaliationResource extends JsonResource
         return [
           'Comentário: ' => $this->comment,
           'Nota: ' => $this->grade,
+          'Usuário: ' => $this->id_user_measurer,
         ];
     }
 }
