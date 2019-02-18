@@ -10,6 +10,8 @@ use App\Notifications\Edit;
 use App\Notifications\Delete;
 use Auth;
 use App\User;
+use App\Project;
+use App\Work;
 use DB;
 
 class PassportController extends Controller
@@ -72,5 +74,17 @@ class PassportController extends Controller
         $user->notify(new Delete($user));
         User::destroy($user);
         return response()->json(["O usuário $user->username foi deletado."]);
+    }
+
+    public function getProjects(){
+      return Project::all();
+    }
+
+    public function getWorks(){
+      return Work::all();
+    }
+
+    public function getUsers(){
+      return User::all();
     }
 }

@@ -30,7 +30,6 @@ class ProjectRequest extends FormRequest
         return [
             'name' => 'required|string|unique:projects,name',
             'description' => 'nullable|string',
-            'user_id' => 'required|integer|exists:users,id',
         ];
       }
 
