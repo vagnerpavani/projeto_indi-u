@@ -9,5 +9,9 @@ import { observable } from 'rxjs';
 })
 export class PerfilService {
 
+  apiUrl: string = 'https://localhost/8000/';
+
   constructor() { }
+
+  getUser()
 }

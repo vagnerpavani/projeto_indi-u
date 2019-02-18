@@ -7,12 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroComponent implements OnInit {
 
-  passwordError:boolean = false;
-  emailError:boolean = false;
-  confirm_passwordError:boolean = false;
-  textEmail: string = "email";
-  textoSenha: string = 'senha';
-  confirmar_senha:string = "confirmar senha";
+   nomeProjeto:string = "Nome";
+   userNameProjeto:string = "Nome de usuario";
+   emailProjeto:string = "Email";
+   passwordProjeto:string = "Senha";
+   passwordConfirmProjeto:string = "Comfirmar Senha";
+   languageProjeto:string = "Lingua";
+   mudarCorNome:boolean = false;
+   mudarCorUserName:boolean = false;
+   mudarCorEmail:boolean = false;
+   mudarCorPassworld:boolean = false;
+   mudarCorPasswordConfirm:boolean = false;
+   mudarCorLanguage:boolean = false;
 
   constructor() { }
 
@@ -24,28 +30,55 @@ export class CadastroComponent implements OnInit {
     console.log(cadastro);
   }
 
-  checkPassword(senha){
-     if(senha.value.lenght < 6)
-        this.passwordError=true;
-      else
-        this.passwordError=false;
-
-  }
-
-  checkConfirmPassword(password,confirm_password){
-    if(confirm_password.value != password.value){
-       this.confirm_passwordError = true;
-       password.value = "senhas nao sao iguais";
+  mudarNome(name){
+    if(name.invalid==true){
+      this.nomeProjeto = "Campo necessario";
+      this.mudarCorNome = true;
+    }else{
+      this.nomeProjeto = "Nome";
+      this.mudarCorNome = false;
     }
-    else
-       this.confirm_passwordError = false;
+
   }
 
-  checkEmail(email){
-    if(email.invalid = true)
-       this.emailError = true;
-    else
-        this.emailError=false;
+  mudarUserName(userName){
+      if(userName.invalid==true){
+        this.userNameProjeto = "Campo necessario";
+        this.mudarCorUserName = true;
+      }else{
+        this.userNameProjeto = "Nome de usuario";
+        this.mudarCorUserName = false;
+    }
+  }
+
+  mudarPassworld(senha){
+    if(senha.invalid==true || senha.value.lenght > 6 ){
+     this.passwordProjeto = "campo necessario";
+     this.mudarCorPassworld = true;
+   }else{
+     this.passwordProjeto = "Senha";
+     this.mudarCorPassworld = false;
+   }
+  }
+
+  mudarPassworldConfirm(senhaConfirm){
+    if(senhaConfirm.invalid || senhaConfirm.value.lebght > 6){
+      this.passwordConfirmProjeto = "Campo necessario";
+      this.mudarCorPasswordConfirm = true;
+    }else{
+      this.passwordConfirmProjeto = "Confirmar Senha";
+      this.mudarCorPasswordConfirm = false;
+    }
+
+  }
+
+  mudarEmail(email){
+    if(email.invalid == true){
+      this.emailProjeto = "Campo Necessario";
+      this.mudarCorEmail = true;
+    }else
+      this.emailProjeto = "Email";
+      this.mudarCorEmail = false;
   }
 
 

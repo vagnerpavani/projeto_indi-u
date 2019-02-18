@@ -14,8 +14,13 @@
   font-size: 7vh;
   color: white;
   font-family: 'Roboto', sans-serif;
-  margin-bottom:0;
-  padding-bottom: 2vh;
+  padding-top:10vh;
+
+}
+
+#titulo-box{
+  padding-bottom: 5vh;
+  padding-top:10vh;
 }
 
 ::placeholder{
@@ -69,8 +74,10 @@ button:disabled {
 
 }
 
-p{
-  font-family: 'Roboto', sans-serif;
+label{
+   font-family: 'Roboto', sans-serif;
+   font-size: 2vh;
+   color: black;
 }
 
 .invalido{

@@ -8,12 +8,14 @@ import { FormsModule } from '@angular/forms';
 import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { HttpClientModule} from '@angular/common/http';
 import { LoginService } from './service/login.service';
+import { PerfilComponent } from './pages/perfil/perfil.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    CadastroComponent
+    CadastroComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,
