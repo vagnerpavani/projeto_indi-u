@@ -1,0 +1,74 @@
+
+#container-main-image{
+  border: 1px solid #5E9ACC;
+  padding-top:20vh;
+  position:static;
+
+}
+
+.container{
+    max-height: 100px;
+    max-width:auto;
+}
+
+img{
+
+  margin-left:5vh;
+  max-width:200px;
+  max-height:200px;
+
+}
+p{
+  margin-bottom: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+#container-information{
+  padding-top: 13vh;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  margin-top:  0;
+  margin-bottom: 0;
+}
+
+i{
+  color:#3B607F;
+}
+
+/*parte das caixas*/
+
+#descricao{
+  padding-bottom: 40vh;
+  border: 1px solid #5E9ACC;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#galeria{
+  padding-bottom: 35vh;
+  border: 1px solid #5E9ACC;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-right: 0;
+  margin-bottom: 5vh;
+}
+
+.caixa{
+  margin:0;
+}
+
+#informacoes{
+  padding-bottom: 35vh;
+  border: 1px solid #5E9ACC;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  margin-left: 0;
+  margin-bottom: 10vh;
+
+}
+
+#grid2{
+  margin: 0;
+}
