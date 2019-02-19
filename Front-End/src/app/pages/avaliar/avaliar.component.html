@@ -1,0 +1,34 @@
+<!--imagem principal + imagem usuario-->
+<div class="row center-align" id="container-main-image" [style.background-image]="mainImageDefault">
+
+    <div id="container-principal" >
+      <a href="/setingsPerfil"><i class="material-icons left-align">settings</i></a>
+      <img [src]="imagemDefault"  class="circle responsive-image center-align">
+    <a routerLink="#"> <i class="material-icons right-align">add</i></a>
+    </div>
+
+</div>
+
+
+<!--nome + rating-->
+<div class="row center-align" id="container-information">
+       <p id="titulo">{{userName}}</p>
+       <i class="small material-icons" *ngFor="let icon of icons">{{ icon }}</i>
+</div>
+
+<!--textarea--->
+<div class="row" >
+  <div class="col l8 m8 s18 offset-l2 offset-m2 offset-s2">
+
+    <label>Descricao da avaliacao</label>
+    <textarea cols="30" rows="5" id="descricaoProjeto" class="center-align materialize-textarea" placeholder="Descricao" name="descricao" ngModel #descricaoProjeto="ngModel" data-length="900"></textarea>
+
+  <button class="waves-effect waves-light btn center-align" type="submit" [disabled]="cadastro.invalid">Cadastrar-se</button>
+
+  <label >Avaliacao passada</label>
+  <div class="container center-align " id="container-avaliacao">
+
+  </div>
+
+ </div>
+</div>
