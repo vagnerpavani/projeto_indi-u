@@ -1,0 +1,32 @@
+<div class="bg" >
+ <div class="row " id="row1">
+
+    <form  #login="ngForm" (ngSubmit)="onSubmit(login)">
+      <div class="row" id="container">
+             <!--titulo-->
+               <div class="center-align " id="caixa">
+                 <p class="center-align " id="title"><img src="../../assets/logogrande.png" alt="logo">Indi-U</p>
+                </div>
+              <!--usuario-->
+              <div class=" col l6 m8 s10 offset-l3 offset-m2 offset-s1" >
+                 <input id="usuario" class="center-align"type="text" placeholder="usuario" name="usuario" ngModel required >
+              </div>
+              <!--senha-->
+              <div class=" col l6 m8 s10 offset-l3 offset-m2 offset-s1 " >
+                <input id="senha" class="center-align" type="password" placeholder="senha" name="senha" ngModel required>
+              </div>
+      </div>
+
+               <!--botao-->
+              <div class="col l6 m8 s10 offset-l3 offset-m2 offset-s1">
+                <button class="waves-effect waves-light btn center-align" type="submit">Entrar</button>
+              </div>
+    </form>
+
+
+        <div class="  center-align " id="cadastro" >
+            <p class="center-align">Ainda nao se cadastrou ?<a  routerLink="/cadastro">Cadastrar-Se</a></p>
+        </div>
+
+  </div>
+</div>

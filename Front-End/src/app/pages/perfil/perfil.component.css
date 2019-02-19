@@ -1,0 +1,110 @@
+#container-main-image{
+  border: 1px solid #5E9ACC;
+  padding-top:20vh;
+  position:static;
+
+  background-repeat: repeat;
+
+}
+
+#container-principal{
+    max-height: 100px;
+    max-width:auto;
+
+}
+
+#titulo{
+  font-size: 5vh;
+}
+
+#container-information{
+  padding-top: 13vh;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  margin-top:  0;
+  margin-bottom: 0;
+}
+
+img{
+
+  margin: 0;
+  max-width:200px;
+  max-height:200px;
+}
+
+p{
+
+  margin-bottom: 0;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+
+i{
+  color:#3B607F;
+}
+
+
+/*antes disso tem antes dos containers */
+
+label{
+
+  font-size: 3vh;
+}
+
+.container{
+  margin-bottom: 2vh;
+  height: 10vh;
+  width: 100%;
+  border: 1px solid #5E9ACC;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  padding: 2vh;
+}
+#bio{
+  position: absolute;
+
+}
+
+#bio-text{
+  text-align: justify;
+}
+
+#container-bio{
+  height: 40vh;
+  box-sizing: border-box;
+  overflow: auto;
+
+
+}
+#box{
+  width: 100%;
+  height: 100%;
+  font-size: 5vh;
+}
+
+#container-profissional{
+  height: 20vh;
+}
+
+#container-contato{
+  height: 20vh;
+}
+
+#container-avaliacao{
+height: 83.5vh;
+}
+
+#container-anteriores{
+  height: 50vh;
+}
+
+button{
+
+  background: #00BCD4;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  position: relative;
+
+}

@@ -1,0 +1,95 @@
+
+<div class="row">
+  <div class="col l10  m10 s12 offset-l1 offset-m1">
+
+    <!--titulo-->
+    <div class="center-align" id="title-box">
+      <label id="titulo">Criar Projeto</label>
+    </div>
+
+     <form  #criarProjeto="ngForm" (ngSubmit)="onSubmit(criarProjeto)">
+
+       <!--nome do projeto-->
+       <div class="row ">
+         <label  [style.color]="mudarCorNome ? 'red' : 'black' ">{{nomeProjeto}}</label>
+         <input type="text" id="nome" class="center-align"   placeholder="EX:Nome" name="nome" ngModel required  #nameVar="ngModel" (blur)="mudarNome(nameVar)" >
+       </div>
+
+       <!--email dos participantes-->
+       <div class="row" >
+         <label  [style.color]="mudarCorEmail ? 'red' : 'black' ">{{emailProjeto}}</label>
+         <input type="email" id="email" class="center-align" placeholder="EX:nome@email.com" name="email" ngModel required #emaiVar="ngModel" (blur)="mudarEmail(emailVar)" >
+        </div>
+
+       <!--repositorio do projeto-->
+       <div class="row">
+         <label>Repositorio do prjeto(opcional)</label>
+         <input type="text" id="repositorioProjeto" class="center-align" placeholder="EX:git://github.com/exemple/exemple.git" name="repositorio" ngModel #repositorioProjeto="ngModel">
+       </div>
+
+       <!--descricao projeto-->
+       <div class="row" >
+         <label >Descricao do Projeto(opcional)</label>
+         <textarea cols="30" rows="5" id="descricaoProjeto" class="center-align materialize-textarea" placeholder="Descricao" name="descricao" ngModel #descricaoProjeto="ngModel" data-length="900"></textarea>
+       </div>
+
+
+       <!--galeria do projeto-->
+       <div class="row">
+       <div class="row">
+         <label>Galeria do projeto(opcional)</label>
+         <div class="file-field input-field">
+           <div class="btn blue">
+             <span >Arquivo</span>
+             <input type="file" multiple ngModel #galeria="ngModel">
+           </div>
+           <div class="file-path-wrapper ">
+             <input class="file-path validate" type="text" placeholder="   EX:img.png" id="arquivos" ngModel #imagem="ngModel" >
+           </div>
+         </div>
+        </div>
+      </div>
+
+
+      <!--imagem do projeto-->
+      <div class="row">
+      <div class="row">
+        <label>imagem do projeto(opcional)</label>
+        <div class="file-field input-field">
+          <div class="btn blue">
+            <span >Arquivo</span>
+            <input type="file" multiple ngModel #imagem="ngModel">
+          </div>
+          <div class="file-path-wrapper ">
+            <input class="file-path validate" type="text" placeholder="   EX:img.png" id="arquivos" >
+          </div>
+        </div>
+       </div>
+      </div>
+
+      <!--imagem de fundo do projeto-->
+      <div class="row">
+      <div class="row">
+        <label>imagem de fundo do projeto(opcional)</label>
+        <div class="file-field input-field">
+          <div class="btn blue">
+            <span >Arquivo</span>
+            <input type="file" multiple ngModel #imagem="ngModel">
+          </div>
+          <div class="file-path-wrapper ">
+            <input class="file-path validate" type="text" placeholder="   EX:img.png" id="arquivos" >
+          </div>
+        </div>
+       </div>
+      </div>
+
+
+       <!--boatao de criar--->
+       <div class="row center-align">
+         <button class="waves-effect waves-light btn center-align"  type="submit" [disabled]="criarProjeto.invalid || nomeProjetoError">Criar</button>
+       </div>
+
+  </form>
+
+  </div>
+</div>

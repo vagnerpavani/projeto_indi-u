@@ -1,0 +1,67 @@
+
+<div class="row">
+  <div class="col l10  m10 s12 offset-l1 offset-m1">
+
+    <!--titulo-->
+    <div class="center-align" id="title-box">
+      <label id="titulo">Alterar Projeto</label>
+    </div>
+
+     <form  #criarProjeto="ngForm" (ngSubmit)="onSubmit(criarProjeto)">
+
+       <!--nome do projeto-->
+       <div class="row ">
+         <label>Nome do projeto</label>
+         <input type="text" id="nomeProjeto" class="center-align" placeholder="EX:Nome" name="nome" ngModel  #nomePrejeto="ngModel">
+       </div>
+
+       <!--email dos participantes-->
+       <div class="row" >
+         <label>Email dos participantes</label>
+         <input type="email" id="emailParticipantes" class="center-align" placeholder="EX:nome@email.com" name="email" ngModel  #emailProjeto="ngModel" >
+
+       </div>
+
+       <!--repositorio do projeto-->
+       <div class="row">
+         <label>Repositorio do prjeto</label>
+         <input type="text" id="repositorioProjeto" class="center-align" placeholder="EX:git://github.com/exemple/exemple.git" name="repositorio" ngModel #repositorioProjeto="ngModel">
+       </div>
+
+       <!--descricao projeto-->
+       <div class="row" >
+         <label >Descricao do Projeto</label>
+         <textarea cols="30" rows="5" id="descricaoProjeto" class="center-align materialize-textarea" placeholder="Descricao" name="descricao" ngModel #descricaoProjeto="ngModel" data-length="900"></textarea>
+       </div>
+
+       <!--img do projeto--><!--exculir imagens-->
+       <div class="row">
+         <label>Imagens do projeto</label>
+         <div class="file-field input-field">
+           <div class="btn blue">
+             <span >Arquivo</span>
+             <input type="file">
+           </div>
+           <div class="file-path-wrapper ">
+             <input class="file-path validate" type="text" placeholder="   EX:img.png" id="arquivos">
+           </div>
+         </div>
+        </div>
+
+        <!--excluir imagens--->
+        <div class="row">
+          <label >Excluir imagens</label>
+          <div class="">
+
+          </div>
+        </div>
+
+       <!--boatao de alterar--->
+       <div class="row center-align">
+         <button class="waves-effect waves-light btn "  type="submit" >Alterar</button>
+       </div>
+
+  </form>
+
+  </div>
+</div>

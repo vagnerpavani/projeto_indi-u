@@ -1,0 +1,100 @@
+<div id="bg">
+     <!--titulo-->
+      <div class="center-align" id="titulo-box">
+          <label id="titulo">Cadastro</label>
+      </div>
+
+
+    <form #cadastro="ngForm" (ngSubmit)='onSubmit(cadastro)'>
+        <div class="row" id="row1">
+          <div class=" col l6 m8 s10 offset-l3 offset-m2 offset-s1" >
+
+          <!--usuario-->
+           <div class="row">
+             <label [style.color]="mudarCorNome ? 'red' : 'black' ">{{nomeProjeto}}</label>
+            <input id="usuario" class="center-align"type="text" placeholder="usuario" name="Ex:usuario" ngModel required #usuario ="ngModel" (blur)="mudarNome(usuario)">
+           </div>
+
+           <!--nome_usuario-->
+           <div class="row">
+             <label [style.color]="mudarCorUserName ? 'red' : 'black' ">{{userNameProjeto}}</label>
+             <input id="nome_usuario" class="center-align" type="text" placeholder="Ex:nome do usuario" name="nam_usuario" ngModel #userName = "ngModel" required (blur)="mudarUserName(userName)">
+           </div>
+
+           <!--senha-->
+          <div class="row">
+             <label [style.color]="mudarCorPassworld ? 'red' : 'black' ">{{passwordProjeto}}</label>
+             <input id="senha" class="center-align" type="password" placeholder="Ex:senha" name="senha" ngModel required #senhaVar="ngModel" (blur)="mudarPassworld(senhaVar)">
+          </div>
+
+
+           <!--confirmacao da senha-->
+           <div class="row">
+             <label [style.color]="mudarCorPasswordConfirm ? 'red' : 'black' ">{{passwordConfirmProjeto}}</label>
+             <input id="senha_confirm" class="center-align" type="password" placeholder="Ex:senha" name="senha_confirm" ngModel required #confirmarSenha="ngModel" (blur)="mudarPasswordConfirm(confirmarSenha)">
+           </div>
+
+           <!--email-->
+           <div class="row">
+             <label [style.color]="mudarCorEmail ? 'red' : 'black' ">{{ emailProjeto }}</label>
+             <input id="email" class="center-align" type="email" placeholder="Ex:exemplo@email.com" name="Ex:email" ngModel required #emailVar="ngModel" (blur)="mudarEmail(emailVar)">
+           </div>
+
+
+
+           <!--data de nascimento-->
+           <div class="row">
+             <label>Data de nascimento(opcional)</label>
+             <input id="data_de_nascimento" class="center-align" type="text" placeholder="DD/MM/YY" name="data_de_nascimento" ngModel >
+           </div>
+
+
+           <!--Telefone-->
+           <div class="row">
+             <label>Telefone(opcional)</label>
+             <input id="telefone" class="center-align" type="text" placeholder="EX:9XXXX-XXXX" name="telefone" ngModel >
+           </div>
+
+
+           <!--repositorio-->
+           <div class="row">
+             <label>Repositorio(opcional)</label>
+             <input id="repositorio" class="center-align" type="text" placeholder="Ex:repositorio" name="repositorio" ngModel >
+           </div>
+
+           <div class="row" >
+             <label >Descricao do Projeto(opcional)</label>
+             <textarea cols="30" rows="5" id="descricaoProjeto" class="center-align materialize-textarea" placeholder="Descricao" name="descricao" ngModel #descricaoProjeto="ngModel" data-length="900"></textarea>
+           </div>
+
+           <!--projetos feitos-->
+           <div class="row">
+             <label>Projetos Feitos(opcional)</label>
+             <input id="projetosFeitos" class="center-align" type="text" placeholder="projetos feitos" name="projetos feitos" ngModel >
+           </div>
+
+           <!--icone de camera-->
+   <div class="row">
+     <div class="row">
+       <label >Imagem do usuario(opcional)</label>
+       <div class="file-field input-field">
+         <div class="btn blue">
+           <span >Arquivo</span>
+           <input type="file"  ngModel #imagem="ngModel">
+         </div>
+         <div class="file-path-wrapper ">
+           <input class="file-path validate" type="text" placeholder="   EX:img.png" id="arquivos" >
+         </div>
+       </div>
+      </div>
+</div>
+
+           <div class="row">
+               <!--botao-->
+               <button class="waves-effect waves-light btn center-align" type="submit" [disabled]="cadastro.invalid">Cadastrar-se</button>
+           </div>
+
+     </div>
+    </div>
+  </form>
+</div>
