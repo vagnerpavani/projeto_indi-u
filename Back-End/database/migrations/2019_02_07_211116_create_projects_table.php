@@ -17,6 +17,7 @@ class CreateProjectsTable extends Migration
             $table->increments('id');
             $table->string('name', 40)->unique();
             $table->text('description')->nullable();
+            $table->string('picture')->nullable();
             $table->integer('user_id')->unsigned();
             $table->timestamps();
         });
