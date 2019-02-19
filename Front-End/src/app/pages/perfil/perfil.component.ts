@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PerfilService } from '../../service/perfil.service'
 
 @Component({
   selector: 'app-perfil',
@@ -9,13 +10,25 @@ export class PerfilComponent implements OnInit {
 
   userName: String = 'Default Name';
   imagemDefault:String = '../../assets/userDefault.png';
-  imagemMain: String ='https://i.pinimg.com/originals/59/5f/e2/595fe2fd04aa8f73ba0ad94e298bd656.png';
   icons:string[] = [this.iconsTipes(false),this.iconsTipes(false),this.iconsTipes(false),this.iconsTipes(false),this.iconsTipes(false)];
-  mainImageDefault = "../../assets/imagemDefundoDefault.jpeg";
+  mainImageDefault = "url(assets/imagemDefundoDefault.jpeg)";
+  certo:boolean = true;
+  text:string;
 
-  constructor() { }
+
+  members:any[] = [];
+  numeroAvaliacao:number = 0;
+
+  constructor( private perfilService:PerfilService, ) { }
 
   ngOnInit() {
+
+   this.perfilService.getMenbers().subscribe(
+     (res) => {
+        console.log(res)
+     }
+   )
+
 //muda numero muda avaliacoa
      this.iconController(this.getRating(5));
 

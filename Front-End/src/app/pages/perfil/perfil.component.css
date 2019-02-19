@@ -3,22 +3,18 @@
   padding-top:20vh;
   position:static;
 
+  background-repeat: repeat;
+
 }
 
-.container{
+#container-principal{
     max-height: 100px;
     max-width:auto;
+
 }
 
-img{
-
-  margin: 0;
-  max-width:200px;
-  max-height:200px;
-}
-p{
-  margin-bottom: 0;
-  font-family: 'Roboto', sans-serif;
+#titulo{
+  font-size: 5vh;
 }
 
 #container-information{
@@ -30,49 +26,78 @@ p{
   margin-bottom: 0;
 }
 
+img{
+
+  margin: 0;
+  max-width:200px;
+  max-height:200px;
+}
+
+p{
+
+  margin-bottom: 0;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+
 i{
   color:#3B607F;
 }
 
 
+/*antes disso tem antes dos containers */
 
+label{
+
+  font-size: 3vh;
+}
+
+.container{
+  margin-bottom: 2vh;
+  height: 10vh;
+  width: 100%;
+  border: 1px solid #5E9ACC;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  padding: 2vh;
+}
 #bio{
-  padding-bottom: 20vh;
-  border: 1px solid #5E9ACC;
-  border-radius: 5px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.descricao{
-  border: 1px solid #5E9ACC;
-  padding-bottom: 12%;
-  border-radius: 5px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: absolute;
 
 }
 
-#avaliacoes{
-
-  border-radius: 5px;
-  border:1px solid #5E9ACC;
-  padding-bottom: 48.4vh;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+#bio-text{
+  text-align: justify;
 }
 
-/*mecher no padding bottom*/
-#trabalhos-anteriores{
+#container-bio{
+  height: 40vh;
+  box-sizing: border-box;
+  overflow: auto;
 
-  border-radius: 5px;
-  border:1px solid #5E9ACC;
-  padding-bottom: 40vh;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  margin-top: 1vh;
 
 }
+#box{
+  width: 100%;
+  height: 100%;
+  font-size: 5vh;
+}
 
-#container-button{
-  margin-top: 20vh;
-  margin-bottom: 20vh;
+#container-profissional{
+  height: 20vh;
+}
+
+#container-contato{
+  height: 20vh;
+}
+
+#container-avaliacao{
+height: 83.5vh;
+}
+
+#container-anteriores{
+  height: 50vh;
 }
 
 button{
@@ -82,10 +107,4 @@ button{
   border-radius: 30px;
   position: relative;
 
-}
-
-.title-box{
-  margin-top: 0;
-  margin-left: 1vw;
-  color: gray;
 }

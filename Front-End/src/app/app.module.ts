@@ -10,12 +10,18 @@ import { HttpClientModule} from '@angular/common/http';
 import { LoginService } from './service/login.service';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 
+import { SetingsPerfilComponent } from './pages/setings-perfil/setings-perfil.component';
+import { AvaliarComponent } from './pages/avaliar/avaliar.component';
+import { PerfilService } from './service/perfil.service';
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     CadastroComponent,
-    PerfilComponent
+    PerfilComponent,
+    SetingsPerfilComponent,
+    AvaliarComponent
   ],
   imports: [
     BrowserModule,
@@ -26,6 +32,7 @@ import { PerfilComponent } from './pages/perfil/perfil.component';
   providers: [
     HttpClientModule,
     LoginService,
+    PerfilService,
   ],
   bootstrap: [AppComponent]
 })

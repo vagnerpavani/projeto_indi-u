@@ -3,25 +3,33 @@
 
 }
 
-#bg{
-  background-color:  #3B607F;
-   max-height: 500%;
-   width: 100%;
-   position:absolute;
-   margin: 0;
-}
+
 #titulo{
   font-size: 7vh;
-  color: white;
   font-family: 'Roboto', sans-serif;
-  padding-top:10vh;
 
+
+}
+
+#avaliacao{
+  padding-bottom: 10vh;
+  margin-bottom: 10vh;
 }
 
 #titulo-box{
-  padding-bottom: 5vh;
+  padding-bottom: 10vh;
   padding-top:10vh;
 }
+
+#texto-bio{
+  overflow: scroll;
+
+}
+#bio{
+   position: static;
+   text-overflow: hidden;
+}
+
 
 ::placeholder{
   color: gray;

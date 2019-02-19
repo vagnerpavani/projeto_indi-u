@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map } from "rxjs/operators";
-import { observable } from 'rxjs';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,10 @@ export class PerfilService {
 
   apiUrl: string = 'https://localhost/8000/';
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  getUser()
+  getMenbers():Observable<any>{
+    return this.http.get( this.apiUrl ).pipe( map(res=>res) );
+  }
+
 }

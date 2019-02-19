@@ -1,4 +1,4 @@
-<label><div id="bg">
+<div id="bg">
      <!--titulo-->
       <div class="center-align" id="titulo-box">
           <label id="titulo">Cadastro</label>
@@ -12,85 +12,82 @@
           <!--usuario-->
            <div class="row">
              <label [style.color]="mudarCorNome ? 'red' : 'black' ">{{nomeProjeto}}</label>
-            <input id="usuario" class="center-align"type="text" placeholder="usuario" name="usuario" ngModel required #usuario ="ngModel" (blur)="mudarNome(usuario)">
+            <input id="usuario" class="center-align"type="text" placeholder="usuario" name="Ex:usuario" ngModel required #usuario ="ngModel" (blur)="mudarNome(usuario)">
            </div>
 
            <!--nome_usuario-->
            <div class="row">
              <label [style.color]="mudarCorUserName ? 'red' : 'black' ">{{userNameProjeto}}</label>
-             <input id="nome_usuario" class="center-align" type="text" placeholder="nome do usuario" name="nam_usuario" ngModel #userName = "ngModel" required (blur)="mudarUserName(userName)">
+             <input id="nome_usuario" class="center-align" type="text" placeholder="Ex:nome do usuario" name="nam_usuario" ngModel #userName = "ngModel" required (blur)="mudarUserName(userName)">
            </div>
 
            <!--senha-->
           <div class="row">
              <label [style.color]="mudarCorPassworld ? 'red' : 'black' ">{{passwordProjeto}}</label>
-             <input id="senha" class="center-align" type="password" placeholder="senha" name="senha" ngModel required #senhaVar="ngModel" (blur)="mudarPassworld(senhaVar)">
+             <input id="senha" class="center-align" type="password" placeholder="Ex:senha" name="senha" ngModel required #senhaVar="ngModel" (blur)="mudarPassworld(senhaVar)">
           </div>
 
 
            <!--confirmacao da senha-->
            <div class="row">
-             <label [style.color]="mudarCorPassworld ? 'red' : 'black' ">{{passwordConfirmProjeto}}</label>
-             <input id="senha_confirm" class="center-align" type="password" placeholder="confirmar senha" name="senha_confirm" ngModel required #confirmarSenha="ngModel" (blur)="mudarPasswordConfirm(senha,confirmarSenha)">
+             <label [style.color]="mudarCorPasswordConfirm ? 'red' : 'black' ">{{passwordConfirmProjeto}}</label>
+             <input id="senha_confirm" class="center-align" type="password" placeholder="Ex:senha" name="senha_confirm" ngModel required #confirmarSenha="ngModel" (blur)="mudarPasswordConfirm(confirmarSenha)">
            </div>
 
            <!--email-->
            <div class="row">
              <label [style.color]="mudarCorEmail ? 'red' : 'black' ">{{ emailProjeto }}</label>
-             <input id="email" class="center-align" type="text" placeholder="Email" name="email" ngModel required #emailVar="ngModel" (blur)="mudarEmail(emailVar)">
+             <input id="email" class="center-align" type="email" placeholder="Ex:exemplo@email.com" name="Ex:email" ngModel required #emailVar="ngModel" (blur)="mudarEmail(emailVar)">
            </div>
 
 
-           <!--lingua-->
-           <div class="row">
-             <label>lingua</label>
-             <input id="lingua" class="center-align" type="text" placeholder="lingua" name="lingua" ngModel required>
-           </div>
 
            <!--data de nascimento-->
            <div class="row">
-             <label>data de nascimento</label>
+             <label>Data de nascimento(opcional)</label>
              <input id="data_de_nascimento" class="center-align" type="text" placeholder="DD/MM/YY" name="data_de_nascimento" ngModel >
            </div>
 
 
            <!--Telefone-->
            <div class="row">
-             <label>telefone</label>
-             <input id="telefone" class="center-align" type="text" placeholder="telefone" name="telefone" ngModel >
+             <label>Telefone(opcional)</label>
+             <input id="telefone" class="center-align" type="text" placeholder="EX:9XXXX-XXXX" name="telefone" ngModel >
            </div>
 
-           <!--pais-->
-           <div class="row">
-             <label>pais</label>
-             <input id="pais" class="center-align" type="text" placeholder="Pais" name="pais" ngModel >
-           </div>
 
            <!--repositorio-->
            <div class="row">
-             <label>repositorio</label>
-             <input id="repositorio" class="center-align" type="text" placeholder="repositorio" name="repositorio" ngModel >
+             <label>Repositorio(opcional)</label>
+             <input id="repositorio" class="center-align" type="text" placeholder="Ex:repositorio" name="repositorio" ngModel >
            </div>
 
-
-           <!--icone de camera-->
-           <div class="row">
-             <label>imagem de perfil</label>
-             <input id="imagem_camera" class="left-align" type="file" placeholder="imagem camera" name="icon_camera" ngModel >
-           </div>
-
-           <!--descricao-->
-           <div class="row">
-             <label>Descricao</label>
-             <input id="descricao" class="left-align" type="text" placeholder="descricao" name="descricao" ngModel >
+           <div class="row" >
+             <label >Descricao do Projeto(opcional)</label>
+             <textarea cols="30" rows="5" id="descricaoProjeto" class="center-align materialize-textarea" placeholder="Descricao" name="descricao" ngModel #descricaoProjeto="ngModel" data-length="900"></textarea>
            </div>
 
            <!--projetos feitos-->
            <div class="row">
-             <label>Projetos Feitos</label>
-             <input id="projetosFeitos" class="left-align" type="text" placeholder="projetos feitos" name="projetos feitos" ngModel >
+             <label>Projetos Feitos(opcional)</label>
+             <input id="projetosFeitos" class="center-align" type="text" placeholder="projetos feitos" name="projetos feitos" ngModel >
            </div>
 
+           <!--icone de camera-->
+   <div class="row">
+     <div class="row">
+       <label >Imagem do usuario(opcional)</label>
+       <div class="file-field input-field">
+         <div class="btn blue">
+           <span >Arquivo</span>
+           <input type="file"  ngModel #imagem="ngModel">
+         </div>
+         <div class="file-path-wrapper ">
+           <input class="file-path validate" type="text" placeholder="   EX:img.png" id="arquivos" >
+         </div>
+       </div>
+      </div>
+</div>
 
            <div class="row">
                <!--botao-->
@@ -101,4 +98,3 @@
     </div>
   </form>
 </div>
-required

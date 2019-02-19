@@ -12,13 +12,12 @@ export class CadastroComponent implements OnInit {
    emailProjeto:string = "Email";
    passwordProjeto:string = "Senha";
    passwordConfirmProjeto:string = "Comfirmar Senha";
-   languageProjeto:string = "Lingua";
+
    mudarCorNome:boolean = false;
    mudarCorUserName:boolean = false;
    mudarCorEmail:boolean = false;
    mudarCorPassworld:boolean = false;
    mudarCorPasswordConfirm:boolean = false;
-   mudarCorLanguage:boolean = false;
 
   constructor() { }
 
@@ -61,7 +60,7 @@ export class CadastroComponent implements OnInit {
    }
   }
 
-  mudarPassworldConfirm(senhaConfirm){
+  mudarPasswordConfirm(senhaConfirm){
     if(senhaConfirm.invalid || senhaConfirm.value.lebght > 6){
       this.passwordConfirmProjeto = "Campo necessario";
       this.mudarCorPasswordConfirm = true;
@@ -76,9 +75,10 @@ export class CadastroComponent implements OnInit {
     if(email.invalid == true){
       this.emailProjeto = "Campo Necessario";
       this.mudarCorEmail = true;
-    }else
+    }else {
       this.emailProjeto = "Email";
       this.mudarCorEmail = false;
+    }
   }
 
 
