@@ -17,7 +17,6 @@ import { RelacoesComponent } from './pages/relacoes/relacoes.component';
 import { PesquisaComponent } from './pages/pesquisa/pesquisa.component';
 
 import { LoginComponent } from './pages/login/login.component';
-import { FormsModule } from '@angular/forms';
 import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { HttpClientModule} from '@angular/common/http';
 import { LoginService } from './service/login.service';
