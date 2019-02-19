@@ -25,6 +25,7 @@ class CreateUsersTable extends Migration
             $table->boolean('is_admin')->default(false);
             $table->string('description')->nullable();
             $table->string('picture')->nullable();
+            $table->float('balance')->default(0);
             $table->timestamps();
         });
     }

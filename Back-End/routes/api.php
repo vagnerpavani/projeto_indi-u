@@ -58,6 +58,10 @@ Route::group(['middleware' => 'auth:api'], function() {
     Route::post('give-avaliation', 'AvaliationController@createAvaliation');
     Route::get('my-avaliations', 'AvaliationController@listAvaliations');
 
+    //Rotas de transferência
+    Route::put('deposit', 'NegociationController@deposit');
+    Route::put('transfer', 'NegociationController@transfer');
+
     //Rotas de ADMIN
     Route::group(['middleware' => 'admin',], function ($router) {
         Route::apiResource('project', 'ProjectController');
