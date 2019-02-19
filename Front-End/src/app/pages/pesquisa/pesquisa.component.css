@@ -113,6 +113,10 @@ p {
 
 
 img {
-  width: 30vh;
-  margin: 1vh; 
+  width: 15vh;
+  margin: 1vh;
+}
+
+.card {
+  margin-bottom: 20vh;
 }
