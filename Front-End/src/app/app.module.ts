@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 
 import { RelacoesComponent } from './pages/relacoes/relacoes.component';
 
+import { PesquisaComponent } from './pages/pesquisa/pesquisa.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { RelacoesComponent } from './pages/relacoes/relacoes.component';
     NavbarComponent,
     FooterComponent,
     HomeComponent,
-    RelacoesComponent
+    RelacoesComponent,
+    PesquisaComponent
   ],
   imports: [
     BrowserModule,
