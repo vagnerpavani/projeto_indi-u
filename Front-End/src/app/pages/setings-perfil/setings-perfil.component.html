@@ -25,7 +25,7 @@
 
       <!--email-->
       <div class="row">
-        <label >Email dos participantes</label>
+        <label >Email</label>
         <input id="email" class="center-align" type="email" placeholder="Ex:exemplo@email.com" name="Ex:email" ngModel required #emailVar="ngModel" (blur)="mudarEmail(emailVar)">
       </div>
 
@@ -49,17 +49,6 @@
       <div class="row">
         <label>Repositorio</label>
         <input id="repositorio" class="center-align" type="text" placeholder="Ex:repositorio" name="repositorio" ngModel >
-      </div>
-
-      <div class="row" >
-        <label >Descricao do Projeto</label>
-        <textarea cols="30" rows="5" id="descricaoProjeto" class="center-align materialize-textarea" placeholder="Descricao" name="descricao" ngModel #descricaoProjeto="ngModel" data-length="900"></textarea>
-      </div>
-
-      <!--projetos feitos-->
-      <div class="row">
-        <label>Projetos Feitos</label>
-        <input id="projetosFeitos" class="center-align" type="text" placeholder="projetos feitos" name="projetos feitos" ngModel >
       </div>
 
       <!--icone de camera-->
