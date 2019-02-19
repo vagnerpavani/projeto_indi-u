@@ -55,4 +55,22 @@ class AvaliationController extends Controller
     $user = Auth::user();
     return $user->avaliations()->get();
   }
+
+  public function getGrade(){
+    $user = Auth::user();
+    $notas = $user->avaliations()->get();
+    $sum = 0;
+    $arraySize = count($notas);
+
+    if($arraySize > 0){
+      foreach($notas as $nota){
+        $sum += $nota->grade;
+      }
+
+      $average = round(($sum/$arraySize));
+      return $average;
+    }
+
+    return response()->json('Você não possui avaliações');
+  }
 }
