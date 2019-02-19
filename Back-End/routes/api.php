@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\ProjectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,6 +42,7 @@ Route::group(['middleware' => 'auth:api'], function() {
     Route::get('my-projects', 'ProjectController@listProjects');
     Route::delete('delete-project/{id}', 'ProjectController@deleteProject');
     Route::put('edit-project/{id}', 'ProjectController@editProject');
+    Route::get('get-project-pic/{id}', 'ProjectController@downloadProjectPic');
 
 
 

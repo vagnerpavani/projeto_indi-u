@@ -8,6 +8,7 @@ use App\User;
 use Auth;
 use DB;
 use App\Http\Resources\ProjectResource;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\ProjectRequest;
 
 class ProjectController extends Controller
@@ -20,6 +21,7 @@ class ProjectController extends Controller
       $project = new Project;
       $project->newProject($request);
       return new ProjectResource($project);
+
   }
 
   public function show($id){
@@ -45,6 +47,19 @@ class ProjectController extends Controller
     $project->name = $request->name;
     $project->description = $request->description;
     $project->user_id = $user->id;
+
+    if($request->picture){
+        $project->picture = $request->picture;
+        $file = $request->file('picture');
+        $filename = 'pic.'.$file->getClientOriginalExtension();
+
+        if (!Storage::exists('localPhotos/')){
+            Storage::makeDirectory('localPhotos/',0775,true);
+        }
+
+        $path = $file->storeAs('localPhotos', $filename);
+        $project->picture = $path;
+    }
 
     $project->save();
     return new ProjectResource($project);
@@ -80,4 +95,9 @@ class ProjectController extends Controller
     }
     return response()->json("Projeto não encontrado!");
   }
+
+  public function downloadProjectPic($id){
+    $project = Project::findOrFail($id);
+    return response()->download(storage_path('app/'.$project->picture));
+    }
 }

@@ -30,6 +30,7 @@ class ProjectRequest extends FormRequest
         return [
             'name' => 'required|string|unique:projects,name',
             'description' => 'nullable|string',
+            'picture' => 'nullable|file|image|mimes:jpeg,png,gif,webp|max:2048',
         ];
       }
 
@@ -38,6 +39,7 @@ class ProjectRequest extends FormRequest
             'name' => 'string|unique:projects,name,',
             'description' => 'string',
             'user_id' => 'integer|exists:users,id',
+            'picture' => 'nullable|file|image|mimes:jpeg,png,gif,webp|max:2048',
         ];
       }
     }
