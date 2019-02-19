@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
+use App\Http\Resources\UserResource;
 use App\Http\Requests\UserRequest;
 use App\Notifications\Register;
 use App\Notifications\Edit;
@@ -72,10 +73,6 @@ class PassportController extends Controller
         successStatus);
     }
 
-    public function getCreationHour(){
-
-    }
-
     public function logout(){
         $accessToken = Auth::user()->token();
         DB::table('oauth_refresh_tokens')->where('access_token_id',
@@ -107,6 +104,6 @@ class PassportController extends Controller
     }
 
     public function getUsers(){
-      return User::all();
+        return UserResource::collection(User::all());
     }
 }
