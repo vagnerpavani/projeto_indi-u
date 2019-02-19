@@ -19,6 +19,7 @@ const routes: Routes = [
   { path: '',redirectTo:'/setingsPerfil' , pathMatch:'full'},
   { path: 'avaliar' , component:AvaliarComponent },
   { path: 'criarProjetos' , component:CriarProjetoComponent },
+  { path: '',redirectTo:'/criarProjetos',pathMatch:'full'},
   { path: 'detalhesProjeto' , component:DetalhesProjetoComponent },
   { path: 'alterarProjetos' , component:AlterarProjetosComponent },
   { path: '',redirectTo:'/alterarProjetos',pathMatch:'full'},
