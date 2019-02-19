@@ -59,6 +59,8 @@ import { AlterarProjetosComponent } from './pages/alterar-projetos/alterar-proje
     HttpClientModule,
     LoginService,
     PerfilService,
+    PagamentoService,
+    PesquisaService
   ],
   bootstrap: [AppComponent]
 })

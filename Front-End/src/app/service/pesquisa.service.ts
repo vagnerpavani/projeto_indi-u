@@ -9,5 +9,8 @@ import { Observable } from 'rxjs';
 })
 export class PesquisaService {
 
+	userapiUrl: string = 'https://localhost/8000/api/list-users'
+	projectsapiUrl: string = 'https://localhost/8000/api/list-projects'
+
   constructor() { }
 }
