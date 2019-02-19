@@ -11,6 +11,8 @@ import { PagamentoComponent } from './pages/pagamento/pagamento.component';
 
 import { FormsModule } from '@angular/forms';
 
+import { RelacoesComponent } from './pages/relacoes/relacoes.component';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     NavbarComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    RelacoesComponent
   ],
   imports: [
     BrowserModule,
