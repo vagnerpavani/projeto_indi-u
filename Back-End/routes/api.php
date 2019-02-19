@@ -56,6 +56,7 @@ Route::group(['middleware' => 'auth:api'], function() {
     //Rotas de avaliação
     Route::post('give-avaliation', 'AvaliationController@createAvaliation');
     Route::get('my-avaliations', 'AvaliationController@listAvaliations');
+    Route::get('get-grade', 'AvaliationController@getGrade');
 
     //Rotas de transferência
     Route::put('deposit', 'NegociationController@deposit');
