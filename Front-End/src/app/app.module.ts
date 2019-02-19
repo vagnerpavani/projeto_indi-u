@@ -13,6 +13,9 @@ import { PerfilComponent } from './pages/perfil/perfil.component';
 import { SetingsPerfilComponent } from './pages/setings-perfil/setings-perfil.component';
 import { AvaliarComponent } from './pages/avaliar/avaliar.component';
 import { PerfilService } from './service/perfil.service';
+import { CriarProjetoComponent } from './pages/criar-projeto/criar-projeto.component';
+import { DetalhesProjetoComponent } from './pages/detalhes-projeto/detalhes-projeto.component';
+import { AlterarProjetosComponent } from './pages/alterar-projetos/alterar-projetos.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,11 @@ import { PerfilService } from './service/perfil.service';
     CadastroComponent,
     PerfilComponent,
     SetingsPerfilComponent,
-    AvaliarComponent
+    AvaliarComponent,
+    AlterarProjetosComponent,
+    DetalhesProjetoComponent,
+    CriarProjetoComponent,
+
   ],
   imports: [
     BrowserModule,

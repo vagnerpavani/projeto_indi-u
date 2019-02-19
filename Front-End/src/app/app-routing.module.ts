@@ -6,6 +6,9 @@ import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { SetingsPerfilComponent } from './pages/setings-perfil/setings-perfil.component';
 import { AvaliarComponent } from './pages/avaliar/avaliar.component';
+import { CriarProjetoComponent } from './pages/criar-projeto/criar-projeto.component';
+import { DetalhesProjetoComponent } from './pages/detalhes-projeto/detalhes-projeto.component';
+import { AlterarProjetosComponent } from './pages/alterar-projetos/alterar-projetos.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -15,6 +18,10 @@ const routes: Routes = [
   { path: 'setingsPerfil' , component:SetingsPerfilComponent },
   { path: '',redirectTo:'/setingsPerfil' , pathMatch:'full'},
   { path: 'avaliar' , component:AvaliarComponent },
+  { path: 'criarProjetos' , component:CriarProjetoComponent },
+  { path: 'detalhesProjeto' , component:DetalhesProjetoComponent },
+  { path: 'alterarProjetos' , component:AlterarProjetosComponent },
+  { path: '',redirectTo:'/alterarProjetos',pathMatch:'full'},
 ];
 
 @NgModule({
