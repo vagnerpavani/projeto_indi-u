@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PerfilService } from '../../service/perfil.service'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-perfil',
@@ -7,6 +8,8 @@ import { PerfilService } from '../../service/perfil.service'
   styleUrls: ['./perfil.component.css']
 })
 export class PerfilComponent implements OnInit {
+
+  curerentRoute: String;
 
   userName: String = 'Default Name';
   imagemDefault:String = '../../assets/userDefault.png';
@@ -19,7 +22,7 @@ export class PerfilComponent implements OnInit {
   members:any[] = [];
   numeroAvaliacao:number = 0;
 
-  constructor( private perfilService:PerfilService, ) { }
+  constructor( private perfilService:PerfilService,private router:Router ) { }
 
   ngOnInit() {
 

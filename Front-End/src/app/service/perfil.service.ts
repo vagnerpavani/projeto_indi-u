@@ -9,12 +9,17 @@ import { Observable } from 'rxjs';
 })
 export class PerfilService {
 
-  apiUrl: string = 'https://localhost/8000/';
+  apiUrl: string = 'https://localhost/8000/api';
 
   constructor(private http: HttpClient) { }
 
-  getMenbers():Observable<any>{
-    return this.http.get( this.apiUrl ).pipe( map(res=>res) );
+  navigateToUser(member:any):Observable<any>{
+    return this.http.post( this.apiUrl,{
+
+
+
+    }
+     ).pipe( map(res=>res) );
   }
 
 }

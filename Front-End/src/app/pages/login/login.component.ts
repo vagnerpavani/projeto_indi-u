@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../../service/login.service';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,9 +9,18 @@ import { LoginService } from '../../service/login.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(public loginService:LoginService ) { }
+  curerentRoute:string;
+
+  constructor(public loginService:LoginService,private router:Router,public http:HttpClient ) { }
 
   ngOnInit() {
+    this.router.events.subscribe(
+      () => this.curerentRoute = this.router.url
+    );
+  }
+
+  navigateToUser(){
+    this.router.navigate(['perfil'])
   }
 
   onSubmit(login){

@@ -15,12 +15,6 @@ export class LoginService {
 
   constructor( public http:HttpClient) { }
 
-//deve se saber como funciona  para se requisitar um usuario
 
-  getUsuario(nomeOuId: string | number):Observable<any>{
-
-//nome do url
-    return this.http.get( this.apiUrl + nomeOuId ).pipe( map(res=>res) );
-  }
 
 }
