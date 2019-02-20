@@ -46,7 +46,7 @@ class Register extends Notification
                     ->line('Seu cadastro foi concluído com sucesso.')
                     ->line("Seu nome de usuário é: $user->username.")
                     ->line('Acesse sua nova conta e aproveite nossos serviços clicando no botão abaixo.')
-                    ->action('Acessar o Portal', url('/'))
+                    ->action('Acessar o Portal', url('localhost:4200/home'))
                     ->line('Obrigado por se juntar ao nosso portal!');
     }
 

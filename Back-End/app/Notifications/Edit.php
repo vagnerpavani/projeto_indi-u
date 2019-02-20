@@ -45,7 +45,7 @@ class Edit extends Notification
                   ->greeting("Olá, $user->name!")
                   ->line('Seus dados foram editados com sucesso.')
                   ->line('Para mais informações, acesse sua conta clicando no botão abaixo.')
-                  ->action('Logar', url('/'));
+                  ->action('Logar', url('localhost:4200/login'));
     }
 
     /**
