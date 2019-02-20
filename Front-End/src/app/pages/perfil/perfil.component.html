@@ -1,18 +1,18 @@
 <!--imagem principal + imagem usuario-->
 <div class="row center-align" id="container-main-image" [style.background-image]="mainImageDefault">
 
-    <div id="container-principal" >
-      <a href="/setingsPerfil"><i class="material-icons left-align">settings</i></a>
-      <img [src]="imagemDefault"  class="circle responsive-image center-align">
+  <div id="container-principal" >
+    <a href="/setingsPerfil"><i class="material-icons left-align">settings</i></a>
+    <img [src]="imagemDefault"  class="circle responsive-image center-align">
     <a routerLink="/criarProjetos"> <i class="material-icons right-align">add</i></a>
-    </div>
+  </div>
 
 </div>
 
 <!--nome + rating-->
 <div class="row center-align" id="container-information">
-       <p id="titulo">{{userName}}</p>
-       <i class="small material-icons" *ngFor="let icon of icons">{{ icon }}</i>
+  <p id="titulo">{{userName}}</p>
+  <i class="small material-icons" *ngFor="let icon of icons">{{ icon }}</i>
 </div>
 
 <!-- primaira grid da esquerda bio-->
@@ -36,7 +36,7 @@
 
     <!--contato--->
     <div class="container center-align" id="container-contato">
-      <label>Conato</label>
+      <label>Contato</label>
     </div>
 
   </div>
@@ -45,7 +45,7 @@
   <div class="col l5 m10 s12 offset-m1 ">
     <div class="container center-align " id="container-avaliacao">
       <div class="row">
-        <label>Avaliacoes</label>
+        <label>Avaliações</label>
       </div>
       <ul>
       </ul>
@@ -57,7 +57,7 @@
 <div class="row">
    <div class="col l10 m10 s12 offset-l1 offset-m1 ">
      <div class="container center-align " id="container-anteriores">
-       <label>Trabalhos Anteriores</label>
+       <label>Projetos</label>
      </div>
    </div>
 </div>

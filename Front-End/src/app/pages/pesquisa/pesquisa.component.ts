@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { PesquisaService } from '../../service/pesquisa.service';
+
 @Component({
   selector: 'app-pesquisa',
   templateUrl: './pesquisa.component.html',
@@ -7,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PesquisaComponent implements OnInit {
 
- 	constructor() { }
+ 	constructor( ) { 
+ 	 	}
 
 	 ngOnInit() {
 	 }
