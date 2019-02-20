@@ -6,6 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Work extends Model
 {
+
+    //Relaciona projetos aos usuários.
+
+    //cria uma nova vaga(relação usuario/projeto).
   public function newWork($request){
     $this->duty = $request->duty;
     $this->user_id = $request->user_id;
@@ -14,6 +18,7 @@ class Work extends Model
     $this->save();
   }
 
+    //altera dados da vaga.
   public function changeWork($request){
     if($request->duty)
       $this->duty = $request->duty;

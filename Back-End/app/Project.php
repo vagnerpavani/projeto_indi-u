@@ -7,10 +7,13 @@ use Illuminate\Support\Facades\Storage;
 
 class Project extends Model
 {
+    //Função para o usuario criar um projeto.
     public function newProject($request){
       $this->name = $request->name;
       $this->description = $request->description;
       $this->user_id = $request->user_id;
+
+        //atribui a foto ao projeto, se o request da foto for feito.
 
       if($request->picture){
         $this->picture = $request->picture;
@@ -27,6 +30,8 @@ class Project extends Model
       $this->save();
     }
 
+
+    // Altera|Atualiza os dados do projeto.
     public function changeProject($request){
         if($request->name)
             $this->name = $request->name;

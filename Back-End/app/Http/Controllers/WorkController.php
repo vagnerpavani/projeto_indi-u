@@ -11,6 +11,8 @@ use App\Http\Requests\WorkRequest;
 
 class WorkController extends Controller
 {
+
+    //---------------CRUD-------------//
   public function index(){
       return WorkResource::collection(Work::all());
   }
@@ -38,6 +40,10 @@ class WorkController extends Controller
     return response()->json("A vaga de $work->duty do projeto $work->project_id foi deletada com sucesso!");
   }
 
+  //--------------------------------------------------------//
+
+
+  //O usuário logado cria uma vaga em um projeto seu selecionado.
   public function newWork($id, WorkRequest $request){
     $user = Auth::user();
     $userProjects = $user->projects()->get();
@@ -54,6 +60,7 @@ class WorkController extends Controller
     }
   }
 
+  //Mostra para o usuário logado as vagas de um projeto seu selecionado.
   public function listWorks($id){
     $user = Auth::user();
     $userProjects = $user->projects()->get();
@@ -65,6 +72,7 @@ class WorkController extends Controller
     return response()->json("Projeto inexistente.");
   }
 
+  //Edita as informações de uma vaga selecionada de um projeto seu selecionado.
   public function editWork(WorkRequest $request, $idProject, $idWork){
     $user = Auth::user();
     $userProjects = $user->projects()->get();
@@ -83,6 +91,7 @@ class WorkController extends Controller
     return response()->json("Projeto não encontrado.");
   }
 
+  //Usuário logado deleta uma vaga selecionada de um projeto selecionado.
   public function deleteWork($idProject, $idWork){
     $user = Auth::user();
     $userProjects = $user->projects()->get();

@@ -20,20 +20,21 @@ class PassportController extends Controller
 {
     public $successStatus = 200;
 
-    public function login(){
-        if (Auth::attempt(['email' => request('email'), 'password' =>
-        request('password')])){
+    public function login(){ //retorna o Token para authenticaçao do usuario
+                            //que já estiver cadastrado no banco de dados.
+        if (Auth::attempt(['email' => request('email'), 'password' =>request('password')])){
 
-        $user = Auth::user();
-        $success['token'] = $user -> createToken('MyApp') -> accessToken;
-        return response() -> json(['success' => $success], $this ->
-        successStatus);
+            $user = Auth::user();
+            $success['token'] = $user -> createToken('MyApp') -> accessToken;
+            return response() -> json(['success' => $success], $this ->successStatus);
+
         }
         else {
         return response() -> json (['error' => 'Unauthorised'], 401);
         }
     }
 
+    //Cria a conta do usuario(registra no banco de dados),loga o usuario e gera um Token.
     public function register(UserRequest $request) {
 
         $newUser = new User;
@@ -42,6 +43,7 @@ class PassportController extends Controller
         $newUser->email = $request->email;
         $newUser->password = bcrypt($request->password);
 
+        //checa para saber se foi passado um aquivo de foto e salva caso tenha sido.
         if($request->picture){
           $newUser->picture = $request->picture;
 
@@ -64,13 +66,14 @@ class PassportController extends Controller
         return response() -> json(['success' => $success], $this ->successStatus);
     }
 
+    //Função para pegar as informações do usuário logado.
     public function getDetails() {
         $user = Auth::user();
         return response()->json(['success' => $user], $this ->
         successStatus);
     }
 
-    public function logout(){
+    public function logout(){ //expira o token do usuario para ele deslogar.
         $accessToken = Auth::user()->token();
         DB::table('oauth_refresh_tokens')->where('access_token_id',
         $accessToken->id)->update(['revoked' => true]);
@@ -78,6 +81,7 @@ class PassportController extends Controller
         return response()->json( null, 204);
     }
 
+    //Função para o usuário logado atualizar os próprios dados.
     public function selfUpdate(UserRequest $request){
         $user = Auth::user();
         $user->notify(new Edit($user));
@@ -85,6 +89,7 @@ class PassportController extends Controller
         return response()->json([$user]);
     }
 
+    //Função para o usuário logado deletar a propria conta.
     public function selfDelete(){
         $user = Auth::user();
         $user->notify(new Delete($user));
@@ -92,10 +97,12 @@ class PassportController extends Controller
         return response()->json(["O usuário $user->username foi deletado."]);
     }
 
+    //Mostra os projetos.
     public function getProjects(){
       return Project::all();
     }
 
+    //Mostra os usuarios do site filtrando os dados.
     public function getUsers(){
         return UserResource::collection(User::all());
     }

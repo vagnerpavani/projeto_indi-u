@@ -32,7 +32,8 @@ class User extends Authenticatable
         'password',
     ];
 
-
+    //Insere um novo usuario no banco de dados
+    //usada na CRUD(rota de Admin) para criar o registro do user.
     public function insertUser($request){
         $this->name = $request->name;
         $this->username = $request->username;
@@ -43,6 +44,7 @@ class User extends Authenticatable
         $this->phone_number = $request->phone_number;
         $this->description = $request->description;
 
+        //salva a foto se tiver foto para salvar.
         if($request->picture){
           $this->picture = $request->picture;
           $file = $request->file('picture');
@@ -59,6 +61,9 @@ class User extends Authenticatable
         $this->save();
     }
 
+
+    //Atualiza os dados do Usuario.
+    //Tambem é usada na crud e para atualizar usuario logados.
     public function updateUser($request){
 
         if($request->name) $this->name = $request->name;
