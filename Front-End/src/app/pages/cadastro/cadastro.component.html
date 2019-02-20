@@ -12,19 +12,19 @@
           <!--usuario-->
            <div class="row">
              <label [style.color]="mudarCorNome ? 'red' : 'black' ">{{nomeProjeto}}</label>
-            <input id="usuario" class="center-align"type="text" placeholder="usuario" name="Ex:usuario" ngModel required #usuario ="ngModel" (blur)="mudarNome(usuario)">
+            <input id="usuario" class="center-align"type="text" placeholder="usuario" name="nome" ngModel required #usuario ="ngModel" (blur)="mudarNome(usuario)">
            </div>
 
            <!--nome_usuario-->
            <div class="row">
              <label [style.color]="mudarCorUserName ? 'red' : 'black' ">{{userNameProjeto}}</label>
-             <input id="nome_usuario" class="center-align" type="text" placeholder="Ex:nome do usuario" name="nam_usuario" ngModel #userName = "ngModel" required (blur)="mudarUserName(userName)">
+             <input id="nome_usuario" class="center-align" type="text" placeholder="Ex:nome do usuario" name="username" ngModel #userName = "ngModel" required (blur)="mudarUserName(userName)">
            </div>
 
            <!--senha-->
           <div class="row">
              <label [style.color]="mudarCorPassworld ? 'red' : 'black' ">{{passwordProjeto}}</label>
-             <input id="senha" class="center-align" type="password" placeholder="Ex:senha" name="senha" ngModel required #senhaVar="ngModel" (blur)="mudarPassworld(senhaVar)">
+             <input id="senha" class="center-align" type="password" placeholder="Ex:senha" name="password" ngModel required #senhaVar="ngModel" (blur)="mudarPassworld(senhaVar)">
           </div>
 
 
@@ -37,7 +37,7 @@
            <!--email-->
            <div class="row">
              <label [style.color]="mudarCorEmail ? 'red' : 'black' ">{{ emailProjeto }}</label>
-             <input id="email" class="center-align" type="email" placeholder="Ex:exemplo@email.com" name="Ex:email" ngModel required #emailVar="ngModel" (blur)="mudarEmail(emailVar)">
+             <input id="email" class="center-align" type="email" placeholder="Ex:exemplo@email.com" name="email" ngModel required #emailVar="ngModel" (blur)="mudarEmail(emailVar)">
            </div>
 
 
@@ -45,14 +45,14 @@
            <!--data de nascimento-->
            <div class="row">
              <label>Data de nascimento(opcional)</label>
-             <input id="data_de_nascimento" class="center-align" type="text" placeholder="DD/MM/YY" name="data_de_nascimento" ngModel >
+             <input id="data_de_nascimento" class="center-align" type="text" placeholder="DD/MM/YY" name="birthday" ngModel >
            </div>
 
 
            <!--Telefone-->
            <div class="row">
              <label>Telefone(opcional)</label>
-             <input id="telefone" class="center-align" type="text" placeholder="EX:9XXXX-XXXX" name="telefone" ngModel >
+             <input id="telefone" class="center-align" type="text" placeholder="EX:9XXXX-XXXX" name="phone_number" ngModel >
            </div>
 
            <!--descricao-->
@@ -64,7 +64,7 @@
            <!--repositorio-->
            <div class="row">
              <label>Repositorio(opcional)</label>
-             <input id="repositorio" class="center-align" type="text" placeholder="Ex:repositorio" name="repositorio" ngModel >
+             <input id="repositorio" class="center-align" type="text" placeholder="Ex:repositorio" name="repository" ngModel >
            </div>
 
            <!--icone de camera-->
@@ -74,7 +74,7 @@
        <div class="file-field input-field">
          <div class="btn blue">
            <span >Arquivo</span>
-           <input type="file"  ngModel #imagem="ngModel">
+           <input type="file" name="picture" ngModel #imagem="ngModel">
          </div>
          <div class="file-path-wrapper ">
            <input class="file-path validate" type="text" placeholder="   EX:img.png" id="arquivos" >

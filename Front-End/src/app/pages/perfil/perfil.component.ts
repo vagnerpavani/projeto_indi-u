@@ -22,11 +22,11 @@ export class PerfilComponent implements OnInit {
   members:any[] = [];
   numeroAvaliacao:number = 0;
 
-  constructor( private perfilService:PerfilService,private router:Router ) { }
+  constructor( public perfilService:PerfilService, ) { }
 
   ngOnInit() {
 
-   
+    this.informacaoUser();
 
 //muda numero muda avaliacoa
      this.iconController(this.getRating(5));
@@ -72,5 +72,11 @@ export class PerfilComponent implements OnInit {
     //caso o pegado do banco de dados nao funcione pegar a imagem default
     //pegar a imagem
   }
+
+  informacaoUser(){
+    this.perfilService.getUser();
+  }
+
+
 
 }
