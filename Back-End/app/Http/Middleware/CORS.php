@@ -19,7 +19,7 @@ class CORS
 
         $resposta ->header->set('Access-Control-Allow-Origin' , 'http://localhost:4200')
                   ->header->set('Access-Control-Allow-Methods' , 'GET, POST, PUT, DELETE, OPTIONS' )
-                  ->header->set('Access-Control-Allow-Headers' , 'Authorization, Content-Type' );
+                  -->header('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, X-Token-Auth, Authorization');
 
         return $resposta ;
     }

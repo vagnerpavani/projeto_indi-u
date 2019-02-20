@@ -13,5 +13,5 @@ export class AuthGuard implements CanActivate {
        console.log('entrei no guarda');
        return true;
      }
-     
+
 }

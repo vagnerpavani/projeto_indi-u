@@ -61,7 +61,6 @@ Route::group(['middleware' => 'auth:api'], function() {
 
 
     //Rotas relacionadas a WORK
-    Route::get('list-works', 'API\PassportController@getWorks');
     Route::post('new-work/{id}', 'WorkController@newWork');
     Route::get('list-works/{id}', 'WorkController@listWorks');
     Route::put('edit-work/{idProject}/{idWork}', 'WorkController@editWork');
@@ -70,6 +69,7 @@ Route::group(['middleware' => 'auth:api'], function() {
     //Rotas de avaliação
     Route::post('give-avaliation', 'AvaliationController@createAvaliation');
     Route::get('my-avaliations', 'AvaliationController@listAvaliations');
+    Route::get('get-grade', 'AvaliationController@getGrade');
 
     //Rotas de transferência
     Route::put('deposit', 'NegociationController@deposit');

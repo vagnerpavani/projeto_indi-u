@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { NavbarComponent } from './navbar/navbar.component';
 
 import { LoginComponent } from './pages/login/login.component';
 import { CadastroComponent } from './pages/cadastro/cadastro.component';
@@ -12,6 +13,7 @@ import { AlterarProjetosComponent } from './pages/alterar-projetos/alterar-proje
 import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
+  { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'cadastro', component: CadastroComponent},
   { path: '', redirectTo:'/cadastro', pathMatch: 'full'},
@@ -23,7 +25,9 @@ const routes: Routes = [
   { path: '',redirectTo:'/criarProjetos',pathMatch:'full'},
   { path: 'detalhesProjeto' , component:DetalhesProjetoComponent },
   { path: 'alterarProjetos' , component:AlterarProjetosComponent },
-  { path: '',redirectTo:'/alterarProjetos',pathMatch:'full'},
+  { path: 'relacoes', component: RelacoesComponent },
+  { path: 'pesquisa', component: PesquisaComponent },
+  { path: 'pagamento', component: PagamentoComponent }
 ];
 
 @NgModule({

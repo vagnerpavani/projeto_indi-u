@@ -1,0 +1,159 @@
+[2019-02-20 02:16:01] local.ERROR: Undefined property: Illuminate\Http\Response::$header {"exception":"[object] (ErrorException(code: 0): Undefined property: Illuminate\\Http\\Response::$header at /home/tanaka/Desktop/projeto_indi-u/Back-End/app/Http/Middleware/CORS.php:20)
+[stacktrace]
+#0 /home/tanaka/Desktop/projeto_indi-u/Back-End/app/Http/Middleware/CORS.php(20): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined prope...', '/home/tanaka/De...', 20, Array)
+#1 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(151): App\\Http\\Middleware\\CORS->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#2 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#3 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/fideloper/proxy/src/TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#4 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(151): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#5 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#6 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(31): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#7 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(151): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#8 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#9 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(31): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#10 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(151): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#11 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#12 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#13 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(151): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#14 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(62): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#16 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(151): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#17 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#19 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#20 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#21 /home/tanaka/Desktop/projeto_indi-u/Back-End/public/index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#22 /home/tanaka/Desktop/projeto_indi-u/Back-End/server.php(21): require_once('/home/tanaka/De...')
+#23 {main}
+"} 
+[2019-02-20 02:28:08] local.ERROR: Undefined property: Illuminate\Http\Response::$header {"exception":"[object] (ErrorException(code: 0): Undefined property: Illuminate\\Http\\Response::$header at /home/tanaka/Desktop/projeto_indi-u/Back-End/app/Http/Middleware/CORS.php:20)
+[stacktrace]
+#0 /home/tanaka/Desktop/projeto_indi-u/Back-End/app/Http/Middleware/CORS.php(20): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined prope...', '/home/tanaka/De...', 20, Array)
+#1 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(151): App\\Http\\Middleware\\CORS->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#2 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#3 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/fideloper/proxy/src/TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#4 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(151): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#5 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#6 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(31): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#7 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(151): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#8 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#9 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(31): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#10 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(151): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#11 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#12 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#13 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(151): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#14 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(62): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#16 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(151): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#17 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#19 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#20 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#21 /home/tanaka/Desktop/projeto_indi-u/Back-End/public/index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#22 /home/tanaka/Desktop/projeto_indi-u/Back-End/server.php(21): require_once('/home/tanaka/De...')
+#23 {main}
+"} 
+[2019-02-20 02:28:27] local.ERROR: Undefined property: Illuminate\Http\Response::$header {"exception":"[object] (ErrorException(code: 0): Undefined property: Illuminate\\Http\\Response::$header at /home/tanaka/Desktop/projeto_indi-u/Back-End/app/Http/Middleware/CORS.php:20)
+[stacktrace]
+#0 /home/tanaka/Desktop/projeto_indi-u/Back-End/app/Http/Middleware/CORS.php(20): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined prope...', '/home/tanaka/De...', 20, Array)
+#1 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(151): App\\Http\\Middleware\\CORS->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#2 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#3 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/fideloper/proxy/src/TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#4 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(151): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#5 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#6 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(31): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#7 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(151): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#8 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#9 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(31): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#10 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(151): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#11 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#12 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#13 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(151): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#14 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(62): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#16 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(151): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#17 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#19 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#20 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#21 /home/tanaka/Desktop/projeto_indi-u/Back-End/public/index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#22 /home/tanaka/Desktop/projeto_indi-u/Back-End/server.php(21): require_once('/home/tanaka/De...')
+#23 {main}
+"} 
+[2019-02-20 02:28:27] local.ERROR: Undefined property: Illuminate\Http\Response::$header {"exception":"[object] (ErrorException(code: 0): Undefined property: Illuminate\\Http\\Response::$header at /home/tanaka/Desktop/projeto_indi-u/Back-End/app/Http/Middleware/CORS.php:20)
+[stacktrace]
+#0 /home/tanaka/Desktop/projeto_indi-u/Back-End/app/Http/Middleware/CORS.php(20): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined prope...', '/home/tanaka/De...', 20, Array)
+#1 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(151): App\\Http\\Middleware\\CORS->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#2 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#3 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/fideloper/proxy/src/TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#4 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(151): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#5 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#6 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(31): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#7 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(151): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#8 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#9 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(31): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#10 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(151): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#11 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#12 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#13 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(151): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#14 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(62): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#16 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(151): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#17 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#19 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#20 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#21 /home/tanaka/Desktop/projeto_indi-u/Back-End/public/index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#22 /home/tanaka/Desktop/projeto_indi-u/Back-End/server.php(21): require_once('/home/tanaka/De...')
+#23 {main}
+"} 
+[2019-02-20 02:28:28] local.ERROR: Undefined property: Illuminate\Http\Response::$header {"exception":"[object] (ErrorException(code: 0): Undefined property: Illuminate\\Http\\Response::$header at /home/tanaka/Desktop/projeto_indi-u/Back-End/app/Http/Middleware/CORS.php:20)
+[stacktrace]
+#0 /home/tanaka/Desktop/projeto_indi-u/Back-End/app/Http/Middleware/CORS.php(20): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined prope...', '/home/tanaka/De...', 20, Array)
+#1 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(151): App\\Http\\Middleware\\CORS->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#2 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#3 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/fideloper/proxy/src/TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#4 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(151): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#5 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#6 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(31): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#7 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(151): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#8 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#9 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(31): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#10 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(151): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#11 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#12 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#13 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(151): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#14 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(62): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#16 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(151): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#17 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#19 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#20 /home/tanaka/Desktop/projeto_indi-u/Back-End/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#21 /home/tanaka/Desktop/projeto_indi-u/Back-End/public/index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#22 /home/tanaka/Desktop/projeto_indi-u/Back-End/server.php(21): require_once('/home/tanaka/De...')
+#23 {main}
+"} 
+[2019-02-20 02:29:42] local.ERROR: Can't use method return value in write context {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Can't use method return value in write context at /home/tanaka/Desktop/projeto_indi-u/Back-End/app/Http/Middleware/CORS.php:20)
+[stacktrace]
+#0 {main}
+"} 
+[2019-02-20 02:29:52] local.ERROR: Can't use method return value in write context {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Can't use method return value in write context at /home/tanaka/Desktop/projeto_indi-u/Back-End/app/Http/Middleware/CORS.php:20)
+[stacktrace]
+#0 {main}
+"} 
+[2019-02-20 02:30:16] local.ERROR: Can't use method return value in write context {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Can't use method return value in write context at /home/tanaka/Desktop/projeto_indi-u/Back-End/app/Http/Middleware/CORS.php:20)
+[stacktrace]
+#0 {main}
+"} 
+[2019-02-20 02:30:27] local.ERROR: Can't use method return value in write context {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Can't use method return value in write context at /home/tanaka/Desktop/projeto_indi-u/Back-End/app/Http/Middleware/CORS.php:20)
+[stacktrace]
+#0 {main}
+"} 
+[2019-02-20 02:30:27] local.ERROR: Can't use method return value in write context {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Can't use method return value in write context at /home/tanaka/Desktop/projeto_indi-u/Back-End/app/Http/Middleware/CORS.php:20)
+[stacktrace]
+#0 {main}
+"} 
+[2019-02-20 02:34:52] local.ERROR: Can't use method return value in write context {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Can't use method return value in write context at /home/tanaka/Desktop/projeto_indi-u/Back-End/app/Http/Middleware/CORS.php:20)
+[stacktrace]
+#0 {main}
+"} 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PerfilService } from '../../service/perfil.service';
+import { PerfilService } from '../../service/perfil.service'
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./perfil.component.css']
 })
 export class PerfilComponent implements OnInit {
+
+  curerentRoute: String;
 
   userName: String = 'Default Name';
   imagemDefault:String = '../../assets/userDefault.png';

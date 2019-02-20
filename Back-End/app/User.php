@@ -88,8 +88,6 @@ class User extends Authenticatable
         $this->save();
     }
 
-
-
     public function projects(){
         return $this->hasMany('App\Project');
     }

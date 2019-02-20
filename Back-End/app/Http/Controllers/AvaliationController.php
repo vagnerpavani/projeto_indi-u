@@ -9,6 +9,7 @@ use Auth;
 use DB;
 use App\Http\Resources\AvaliationResource;
 use App\Http\Requests\AvaliationRequest;
+use Carbon\Carbon;
 
 class AvaliationController extends Controller
 {
@@ -17,8 +18,9 @@ class AvaliationController extends Controller
   }
 
   public function store(AvaliationRequest $request){
+      $date = new Carbon();
       $avaliation = new Avaliation;
-      $avaliation->newAvaliation($request);
+      $avaliation->newAvaliation($request, $date);
       return new AvaliationResource($avaliation);
   }
 
@@ -40,10 +42,12 @@ class AvaliationController extends Controller
   }
 
   public function createAvaliation(AvaliationRequest $request){
+    $date = new Carbon();
     $user = Auth::user();
     $avaliation = new Avaliation;
     $avaliation->comment = $request->comment;
     $avaliation->grade = $request->grade;
+    $avaliation->date = $date;
     $avaliation->id_user_measurer = $user->id;
     $avaliation->id_user_measured = $request->id_user_measured;
 
@@ -54,5 +58,23 @@ class AvaliationController extends Controller
   public function listAvaliations(){
     $user = Auth::user();
     return $user->avaliations()->get();
+  }
+
+  public function getGrade(){
+    $user = Auth::user();
+    $notas = $user->avaliations()->get();
+    $sum = 0;
+    $arraySize = count($notas);
+
+    if($arraySize > 0){
+      foreach($notas as $nota){
+        $sum += $nota->grade;
+      }
+
+      $average = round(($sum/$arraySize));
+      return $average;
+    }
+
+    return response()->json('Você não possui avaliações');
   }
 }

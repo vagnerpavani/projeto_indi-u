@@ -15,7 +15,6 @@ export class LoginService {
 
   constructor( public http:HttpClient) { }
 
-//deve se saber como funciona  para se requisitar um usuario
 
   getUsuario(user:any):Observable<any>{
 
