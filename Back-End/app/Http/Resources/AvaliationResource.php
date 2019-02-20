@@ -18,6 +18,7 @@ class AvaliationResource extends JsonResource
           'Comentário: ' => $this->comment,
           'Nota: ' => $this->grade,
           'Usuário: ' => $this->id_user_measurer,
+          'Data da avaliação: ' => $this->date,
         ];
     }
 }

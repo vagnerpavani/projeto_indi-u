@@ -17,6 +17,7 @@ class CreateAvaliationsTable extends Migration
             $table->increments('id');
             $table->text('comment');
             $table->integer('grade');
+            $table->date('date');
             $table->integer('id_user_measurer')->unsigned();
             $table->integer('id_user_measured')->unsigned();
             $table->timestamps();
