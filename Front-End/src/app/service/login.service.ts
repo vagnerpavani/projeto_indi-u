@@ -17,7 +17,7 @@ export class LoginService {
 
 
   getUsuario(user:any):Observable<any>{
-
+    console.log(user);
     return this.http.post(this.apiUrl,{
       email:user.email,
       password:user.password

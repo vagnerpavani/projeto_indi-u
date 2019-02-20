@@ -10,13 +10,24 @@ import { Observable } from 'rxjs';
 export class PerfilService {
 
   apiUrl: string = 'https://localhost/8000/api';
-  userUrl: string = 'https://localhost/8000/api/get-details'
+  userUrl: string = 'https://localhost/8000/api/get-details';
+  ratingUrls:string = 'https://localhost/8000/api/get-grade';
+  imageUrl:string = 'https://localhost/8000/api/'
+
+
 
   constructor(private http: HttpClient) { }
 
-  getUser(identificadorDeUser:string | number):Observable<any>{
-
-    return this.http.get( this.userUrl ).pipe( map(res=>res) );
+  getUser():Observable<any>{
+    let token = localStorage.getItem('token');
+    token = 'Bearer '+ token;
+    let header:HttpHeaders = new HttpHeaders({'Authorization':token})
+    return this.http.get( this.userUrl, {headers: header} ).pipe( map(res=>res) );
   }
+
+  getInformacao(member:any):Observable<any>{
+     return this.http.get(this.userUrl).pipe(map(res=>res));
+  }
+
 
 }

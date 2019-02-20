@@ -26,7 +26,7 @@ export class PerfilComponent implements OnInit {
 
   ngOnInit() {
 
-    this.informacaoUser(1);
+    this.informacaoUser();
 
 //muda numero muda avaliacoa
      this.iconController(this.getRating(5));
@@ -73,16 +73,10 @@ export class PerfilComponent implements OnInit {
     //pegar a imagem
   }
 
-  informacaoUser(user){
-    console.log(user);
-    this.perfilService.getUser(user).subscribe(
-
-      res => {
-        console.log(res);
-      }
-
-    );
+  informacaoUser(){
+    this.perfilService.getUser();
   }
+
 
 
 }

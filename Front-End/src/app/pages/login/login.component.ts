@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,EventEmitter } from '@angular/core';
 import { LoginService } from '../../service/login.service';
+import { AuthenticationService } from '../../service/authentication.service';
 import { Router } from '@angular/router';
+
 
 
 @Component({
@@ -10,7 +12,10 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
+
   curerentRoute:string;
+
+  users:any[]=[];
 
   constructor(public loginService:LoginService,private router:Router ) { }
 
@@ -28,22 +33,21 @@ export class LoginComponent implements OnInit {
     console.log(login);
   }
 
+  enterUser(varForm){
+    this.users = varForm.value;
+    console.log(this.users);
 
-  enterUser(login){
-
-   this.user = login.value;
-   console.log(this.user);
-
-   this.loginService.getUsuario(this.user).subscribe(
-
-     (res) => {
-       console.log(res);
-       this.user.push({
-         email:this.user.email,
-         password:this.user.password,
-       })
-     }
-   );
+    this.loginService.getUsuario(this.users).subscribe(
+      (res)=>{
+        console.log(res);
+        localStorage.setItem('token',res.success.token);
+        console.log(localStorage.getItem('token'));
+        this.router.navigate(['perfil']);
+      });
   }
 
-}
+  sairUser(){
+    localStorage.removeItem('tpokens');
+  }
+
+  }

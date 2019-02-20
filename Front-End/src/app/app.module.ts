@@ -28,6 +28,8 @@ import { CriarProjetoComponent } from './pages/criar-projeto/criar-projeto.compo
 import { DetalhesProjetoComponent } from './pages/detalhes-projeto/detalhes-projeto.component';
 import { AlterarProjetosComponent } from './pages/alterar-projetos/alterar-projetos.component';
 import { AuthGuard } from './guards/auth.guard';
+import { AuthenticationService } from './service/authentication.service';
+
 
 @NgModule({
   declarations: [
@@ -36,7 +38,6 @@ import { AuthGuard } from './guards/auth.guard';
     HomeComponent,
     NavbarComponent,
     FooterComponent,
-    HomeComponent,
     RelacoesComponent,
     PesquisaComponent,
     LoginComponent,
@@ -60,7 +61,8 @@ import { AuthGuard } from './guards/auth.guard';
     PerfilService,
     PagamentoService,
     PesquisaService,
-    AuthGuard
+    AuthGuard,
+    AuthenticationService
   ],
   bootstrap: [AppComponent]
 })

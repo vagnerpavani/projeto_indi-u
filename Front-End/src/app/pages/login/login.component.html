@@ -1,7 +1,7 @@
 <div class="bg" >
  <div class="row " id="row1">
 
-    <form  #login="ngForm" (ngSubmit)="enterUser(login)">
+    <form  ngFor="let user of users;"  #login="ngForm" (ngSubmit)="enterUser(login)">
       <div class="row" id="container">
              <!--titulo-->
                <div class="center-align " id="caixa">
@@ -9,11 +9,11 @@
                 </div>
               <!--usuario-->
               <div class=" col l6 m8 s10 offset-l3 offset-m2 offset-s1" >
-                 <input id="usuario" class="center-align"type="text" placeholder="usuario" name="usuario" ngModel required >
+                 <input id="usuario" class="center-align"type="text" placeholder="usuario" name="email" ngModel required >
               </div>
               <!--senha-->
               <div class=" col l6 m8 s10 offset-l3 offset-m2 offset-s1 " >
-                <input id="senha" class="center-align" type="password" placeholder="senha" name="senha" ngModel required>
+                <input id="senha" class="center-align" type="password" placeholder="senha" name="password" ngModel required>
               </div>
       </div>
 
