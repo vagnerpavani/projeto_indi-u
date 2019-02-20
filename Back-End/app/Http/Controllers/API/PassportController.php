@@ -69,7 +69,7 @@ class PassportController extends Controller
 
     public function getDetails() {
         $user = Auth::user();
-        return response() -> json(['success' => $user], $this ->
+        return response()->json(['success' => $user], $this ->
         successStatus);
     }
 
@@ -97,10 +97,6 @@ class PassportController extends Controller
 
     public function getProjects(){
       return Project::all();
-    }
-
-    public function getWorks(){
-      return Work::all();
     }
 
     public function getUsers(){
