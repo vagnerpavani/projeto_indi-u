@@ -9,12 +9,13 @@ import { AvaliarComponent } from './pages/avaliar/avaliar.component';
 import { CriarProjetoComponent } from './pages/criar-projeto/criar-projeto.component';
 import { DetalhesProjetoComponent } from './pages/detalhes-projeto/detalhes-projeto.component';
 import { AlterarProjetosComponent } from './pages/alterar-projetos/alterar-projetos.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'cadastro', component: CadastroComponent},
   { path: '', redirectTo:'/cadastro', pathMatch: 'full'},
-  { path: 'perfil' , component: PerfilComponent },
+  { path: 'perfil' , component: PerfilComponent ,canActivate:[AuthGuard]},
   { path: 'setingsPerfil' , component:SetingsPerfilComponent },
   { path: '',redirectTo:'/setingsPerfil' , pathMatch:'full'},
   { path: 'avaliar' , component:AvaliarComponent },

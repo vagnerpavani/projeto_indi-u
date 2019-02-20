@@ -23,11 +23,7 @@ export class PerfilComponent implements OnInit {
 
   ngOnInit() {
 
-   this.perfilService.getMenbers().subscribe(
-     (res) => {
-        console.log(res)
-     }
-   )
+
 
 //muda numero muda avaliacoa
      this.iconController(this.getRating(5));

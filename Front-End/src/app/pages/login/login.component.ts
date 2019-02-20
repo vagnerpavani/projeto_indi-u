@@ -9,6 +9,8 @@ import { LoginService } from '../../service/login.service';
 })
 export class LoginComponent implements OnInit {
 
+  user:any;
+
   constructor(public loginService:LoginService ) { }
 
   ngOnInit() {
@@ -16,6 +18,24 @@ export class LoginComponent implements OnInit {
 
   onSubmit(login){
     console.log(login);
+  }
+
+
+  enterUser(login){
+
+   this.user = login.value;
+   console.log(this.user);
+
+   this.loginService.getUsuario(this.user).subscribe(
+
+     (res) => {
+       console.log(res);
+       this.user.push({
+         email:this.user.email,
+         password:this.user.password,
+       })
+     }
+   );
   }
 
 }

@@ -16,6 +16,7 @@ import { PerfilService } from './service/perfil.service';
 import { CriarProjetoComponent } from './pages/criar-projeto/criar-projeto.component';
 import { DetalhesProjetoComponent } from './pages/detalhes-projeto/detalhes-projeto.component';
 import { AlterarProjetosComponent } from './pages/alterar-projetos/alterar-projetos.component';
+import { AuthGuard } from './guards/auth.guard';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { AlterarProjetosComponent } from './pages/alterar-projetos/alterar-proje
     HttpClientModule,
     LoginService,
     PerfilService,
+    AuthGuard,
   ],
   bootstrap: [AppComponent]
 })

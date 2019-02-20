@@ -106,4 +106,9 @@ class PassportController extends Controller
     public function getUsers(){
         return UserResource::collection(User::all());
     }
+//coisas do middleware
+    public function construct(){
+      $this.middleware
+      ('cors');
+    }
 }

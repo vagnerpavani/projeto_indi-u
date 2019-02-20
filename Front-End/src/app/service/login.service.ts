@@ -11,16 +11,18 @@ export class LoginService {
 
 //mecher na string caso nao consiga achor a string
 
-   apiUrl: string = 'https://localhost/8000/';
+  apiUrl: string = 'http://localhost:8000/api/login';
 
   constructor( public http:HttpClient) { }
 
 //deve se saber como funciona  para se requisitar um usuario
 
-  getUsuario(nomeOuId: string | number):Observable<any>{
+  getUsuario(user:any):Observable<any>{
 
-//nome do url
-    return this.http.get( this.apiUrl + nomeOuId ).pipe( map(res=>res) );
+    return this.http.post(this.apiUrl,{
+      email:user.email,
+      password:user.password
+    }).pipe(map(res=>res));
+
   }
-
 }
