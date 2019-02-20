@@ -34,6 +34,7 @@ Route::group(['middleware' => 'auth:api'], function() {
     Route::get('logout', 'API\PassportController@logout');
     Route::get('list-users', 'API\PassportController@getUsers');
     Route::post('get-details', 'API\PassportController@getDetails');
+    Route::get('get-user-pic','API\PassportController@getSelfPic');
     Route::get('get-pic/{id}', 'UserController@downloadPic');
 
     //Rotas relacionadas a PROJECT
