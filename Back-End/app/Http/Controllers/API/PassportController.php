@@ -15,7 +15,6 @@ use App\User;
 use App\Project;
 use App\Work;
 use DB;
-use Carbon\Carbon;
 
 class PassportController extends Controller
 {
@@ -42,8 +41,6 @@ class PassportController extends Controller
         $newUser->username = $request->username;
         $newUser->email = $request->email;
         $newUser->password = bcrypt($request->password);
-        $creation = new Carbon;
-        $creation = Carbon::now();
 
         if($request->picture){
           $newUser->picture = $request->picture;
@@ -64,7 +61,7 @@ class PassportController extends Controller
         $newUser->notify(new Register($newUser));
         $success['token'] = $newUser->createToken('MyApp')->accessToken;
         $success['name'] = $newUser->name;
-        return response() -> json(['success' => $success , $creation], $this ->successStatus);
+        return response() -> json(['success' => $success], $this ->successStatus);
     }
 
     public function getDetails() {
