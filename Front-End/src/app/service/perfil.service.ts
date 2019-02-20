@@ -13,13 +13,6 @@ export class PerfilService {
 
   constructor(private http: HttpClient) { }
 
-  navigateToUser(member:any):Observable<any>{
-    return this.http.post( this.apiUrl,{
 
-
-
-    }
-     ).pipe( map(res=>res) );
-  }
 
 }
