@@ -12,6 +12,7 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
+        //insere um Usuário administrador no BD.
         DB::table('users')->insert([
             'name'=> 'ADM',
             'username' => 'ADM',

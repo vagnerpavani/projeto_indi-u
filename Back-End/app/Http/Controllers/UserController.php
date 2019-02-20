@@ -15,7 +15,10 @@ class UserController extends Controller
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
-     */
+    */
+
+    //---------------CRUD--------------//
+
     public function index()
     {
         return User::all();
@@ -76,7 +79,10 @@ class UserController extends Controller
         User::destroy($id);
         return response()->json(["O usuário $user->username foi deletado."]);
     }
+//------------------------------------------------------------------------//
 
+
+//Retorna a foto do usuário(selecionado) caso ele tenha uma.
     public function downloadPic($id){
         $user = User::findOrFail($id);
         return response()->download(storage_path('app/'.$user->picture));

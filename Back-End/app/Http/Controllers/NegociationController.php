@@ -10,6 +10,7 @@ use App\Http\Requests\NegociationRequest;
 
 class NegociationController extends Controller
 {
+    //Função para o usuário logado depositar um valor em sua conta.
     public function deposit(NegociationRequest $request){
       $user_deposit = Auth::user();
 
@@ -20,6 +21,8 @@ class NegociationController extends Controller
       return response()->json('Depositado com sucesso.');
     }
 
+    //transfere o um valor do usuário logado para outro, se
+    //ele possuir aquela quantia ou mais em seu saldo.
     public function transfer(NegociationRequest $request){
       $user_deposit = Auth::user();
 

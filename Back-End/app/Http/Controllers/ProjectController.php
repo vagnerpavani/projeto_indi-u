@@ -13,6 +13,8 @@ use App\Http\Requests\ProjectRequest;
 
 class ProjectController extends Controller
 {
+
+//------------CRUD-------------//
   public function index(){
       return ProjectResource::collection(Project::all());
   }
@@ -40,7 +42,9 @@ class ProjectController extends Controller
     Project::destroy($id);
     return response()->json("O projeto $project->name foi deletado com sucesso!");
   }
+//--------------------------------------------------------//
 
+//O usuário logado cria um projeto.
   public function createProject(ProjectRequest $request){
     $user = Auth::user();
     $project = new Project;
@@ -48,6 +52,7 @@ class ProjectController extends Controller
     $project->description = $request->description;
     $project->user_id = $user->id;
 
+    //checa se o usuário passou foto para o projeto e salva caso tenha passado.
     if($request->picture){
         $project->picture = $request->picture;
         $file = $request->file('picture');
@@ -64,12 +69,13 @@ class ProjectController extends Controller
     $project->save();
     return new ProjectResource($project);
   }
-
+  //Mostra os projetos do usuário logado.
   public function listProjects(){
     $user = Auth::user();
     return $user->projects()->get();
   }
 
+  //Apaga o projeto do usuário logado.
   public function deleteProject($id){
     $user = Auth::user();
     $projects = $user->projects()->get();
@@ -83,6 +89,7 @@ class ProjectController extends Controller
     return response()->json("Projeto não encontrado!");
   }
 
+  //Edita as informações de um projeto do usuário logado.
   public function editProject($id, ProjectRequest $request){
     $user = Auth::user();
     $projects = $user->projects()->get();
@@ -96,6 +103,7 @@ class ProjectController extends Controller
     return response()->json("Projeto não encontrado!");
   }
 
+  //Retorna a foto do projeto que exista no BD,se tiver uma.
   public function downloadProjectPic($id){
     $project = Project::findOrFail($id);
     return response()->download(storage_path('app/'.$project->picture));

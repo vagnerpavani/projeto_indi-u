@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Avaliation extends Model
 {
+
+    //Função para criar avaliação: usuario para usuario.
   public function newAvaliation($request, $date){
     $this->comment = $request->comment;
     $this->grade = $request->grade;
@@ -16,6 +18,7 @@ class Avaliation extends Model
     $this->save();
   }
 
+  //Atualiza a avaliação.
   public function changeAvaliation($request){
     if($request->comment)
       $this->comment = $request->comment;

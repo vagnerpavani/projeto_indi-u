@@ -15,6 +15,8 @@ class Admin
      * @param  \Closure  $next
      * @return mixed
      */
+
+    //middleware para checar se o Usuário logado é administrador ou não.
     public function handle($request, Closure $next)
     {
 
