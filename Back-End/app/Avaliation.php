@@ -6,9 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Avaliation extends Model
 {
-  public function newAvaliation($request){
+  public function newAvaliation($request, $date){
     $this->comment = $request->comment;
     $this->grade = $request->grade;
+    $this->grade = $date;
     $this->id_user_measurer = $request->id_user_measurer;
     $this->id_user_measured = $request->id_user_measured;
 

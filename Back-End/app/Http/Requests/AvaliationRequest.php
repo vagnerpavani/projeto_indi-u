@@ -31,6 +31,7 @@ class AvaliationRequest extends FormRequest
               'comment' => 'required|string',
               'grade' => 'required|integer',
               'id_user_measured' => 'required|integer|exists:users,id',
+              'date' => 'nullable|date',
           ];
       }
       if ($this->isMethod('put')){

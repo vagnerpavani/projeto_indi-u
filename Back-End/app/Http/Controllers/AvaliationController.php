@@ -9,6 +9,7 @@ use Auth;
 use DB;
 use App\Http\Resources\AvaliationResource;
 use App\Http\Requests\AvaliationRequest;
+use Carbon\Carbon;
 
 class AvaliationController extends Controller
 {
@@ -17,8 +18,9 @@ class AvaliationController extends Controller
   }
 
   public function store(AvaliationRequest $request){
+      $date = new Carbon();
       $avaliation = new Avaliation;
-      $avaliation->newAvaliation($request);
+      $avaliation->newAvaliation($request, $date);
       return new AvaliationResource($avaliation);
   }
 
@@ -40,10 +42,12 @@ class AvaliationController extends Controller
   }
 
   public function createAvaliation(AvaliationRequest $request){
+    $date = new Carbon();
     $user = Auth::user();
     $avaliation = new Avaliation;
     $avaliation->comment = $request->comment;
     $avaliation->grade = $request->grade;
+    $avaliation->date = $date;
     $avaliation->id_user_measurer = $user->id;
     $avaliation->id_user_measured = $request->id_user_measured;
 
