@@ -1,5 +1,32 @@
+#bg1 {
+	background-image: url("../../../assets/jogos/minecraft.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh; 
+}
+
+#bg2 {
+	background-image: url("../../../assets/jogos/j4.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh; 
+}
+
+#bg3 {
+	background-image: url("../../../assets/jogos/jogo2.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh; 
+}
+
+
+
 h2 {
 	color: #76C0FF;
+	font-family: 'Quantico', sans-serif;
 }
 
 .section {
@@ -10,48 +37,23 @@ h2 {
 
 h3 {
 	color: #ffffff;
+	font-family: 'Quantico', sans-serif;
 }
 
 img{
-	height: 50vh;
+	min-height: 20vh;
+	max-height: 25vh;
+	margin: 5vh; 
 }
 
-/*image hover overlay - áreas
-.container {
-  position: relative;
-  width: 50%;
+#areas{
+	background-color: #3B607F;
 }
 
-.image {
-  display: block;
-  width: 100%;
-  height: auto;
+button {
+  background-color: #ffffff;
+  border-radius: 25px;
+  max-width: 500px;
+  min-width: 300px;
 }
 
-.overlay {
-  position: absolute;
-  bottom: 100%;
-  left: 0;
-  right: 0;
-  background-color: #008CBA;
-  overflow: hidden;
-  width: 100%;
-  height:0;
-  transition: .5s ease;
-}
-
-.container:hover .overlay {
-  bottom: 0;
-  height: 100%;
-}
-
-.text {
-  white-space: nowrap; 
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  overflow: hidden;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%); */
