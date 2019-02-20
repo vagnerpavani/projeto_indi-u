@@ -10,9 +10,13 @@ import { Observable } from 'rxjs';
 export class PerfilService {
 
   apiUrl: string = 'https://localhost/8000/api';
+  userUrl: string = 'https://localhost/8000/api/get-details'
 
   constructor(private http: HttpClient) { }
 
+  getUser(identificadorDeUser:string | number):Observable<any>{
 
+    return this.http.get( this.userUrl ).pipe( map(res=>res) );
+  }
 
 }

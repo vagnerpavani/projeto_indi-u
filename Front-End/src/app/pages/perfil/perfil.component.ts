@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PerfilService } from '../../service/perfil.service'
+import { PerfilService } from '../../service/perfil.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-perfil',
@@ -19,11 +20,11 @@ export class PerfilComponent implements OnInit {
   members:any[] = [];
   numeroAvaliacao:number = 0;
 
-  constructor( private perfilService:PerfilService, ) { }
+  constructor( public perfilService:PerfilService, ) { }
 
   ngOnInit() {
 
-
+    this.informacaoUser(1);
 
 //muda numero muda avaliacoa
      this.iconController(this.getRating(5));
@@ -69,5 +70,17 @@ export class PerfilComponent implements OnInit {
     //caso o pegado do banco de dados nao funcione pegar a imagem default
     //pegar a imagem
   }
+
+  informacaoUser(user){
+    console.log(user);
+    this.perfilService.getUser(user).subscribe(
+
+      res => {
+        console.log(res);
+      }
+
+    );
+  }
+
 
 }
