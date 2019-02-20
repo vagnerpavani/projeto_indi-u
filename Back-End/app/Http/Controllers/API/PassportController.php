@@ -107,9 +107,12 @@ class PassportController extends Controller
         return UserResource::collection(User::all());
     }
 
+
     //Pega foto do usuário logado
     public function getSelfPic(){
         $user = Auth::user();
         return response()->download(storage_path('app/'.$user->picture));
     }
+
+
 }

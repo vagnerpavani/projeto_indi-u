@@ -13,6 +13,19 @@ use App\Http\Controllers\ProjectController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+//coisas de middleware
+
+Route::group([
+  'middleware'=>'cors',
+], function($router){
+  Route::post('set',
+  'GeolocationController@setUserLocation'
+);
+});
+
+
+/////////////////////////
+
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
