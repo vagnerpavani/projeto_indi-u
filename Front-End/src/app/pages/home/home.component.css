@@ -1,9 +1,28 @@
-#background {
-	background-image: url("../assets/jogos/minecraft.jpg");
+#bg1 {
+	background-image: url("../../../assets/jogos/minecraft.jpg");
 	background-attachment: fixed;
 	background-size: cover;
 	background-repeat: no-repeat;
+	height: 100vh; 
 }
+
+#bg2 {
+	background-image: url("../../../assets/jogos/j4.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh; 
+}
+
+#bg3 {
+	background-image: url("../../../assets/jogos/jogo2.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh; 
+}
+
+
 
 h2 {
 	color: #76C0FF;
@@ -22,7 +41,19 @@ h3 {
 }
 
 img{
-	height: 40vh;
-  margin: 5vh;
+	min-height: 20vh;
+	max-height: 25vh;
+	margin: 5vh; 
+}
+
+#areas{
+	background-color: #3B607F;
+}
+
+button {
+  background-color: #ffffff;
+  border-radius: 25px;
+  max-width: 500px;
+  min-width: 300px;
 }
 
